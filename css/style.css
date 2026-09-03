@@ -44,11 +44,11 @@ input {
 /* ================= VARIABLES ================= */
 
 :root {
-    --green: #9cff00;
-    --green-dark: #5f9900;
+    --green: #F5D76E;
+    --green-dark:  #B89632;
     --black: #050605;
-    --card: #0c100d;
-    --border: rgba(156, 255, 0, 0.18);
+    --card: #0A0A09;
+    --border: rgba(245, 215, 110, 0.18);
     --gray: #949894;
 }
 
@@ -131,11 +131,11 @@ input {
 .logo-accent {
     display: inline;
 
-    color: #9cff00;
+    color: #F5D76E;
 
     text-shadow:
-        0 0 10px rgba(156, 255, 0, 0.45),
-        0 0 25px rgba(156, 255, 0, 0.18);
+        0 0 10px rgba(245, 215, 110, 0.45),
+        0 0 25px rgba(245, 215, 110, 0.18);
 }
 
 .logo-subtitle {
@@ -342,18 +342,27 @@ input {
     color: var(--green);
     font-weight: 700;
     text-shadow:
-        0 0 10px rgba(156, 255, 0, 0.35),
-        0 0 25px rgba(156, 255, 0, 0.18);
+        0 0 10px rgba(245, 215, 110, 0.35),
+        0 0 25px rgba(245, 215, 110, 0.18);
 }
 
 
 .hero-description {
-    max-width: 510px;
-    margin-top: 28px;
+    max-width: 760px;
+    margin-top: 34px;
 
-    color: #a8ada9;
-    font-size: 15px;
-    line-height: 1.7;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(19px, 1.6vw, 24px);
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: -0.02em;
+
+    color: #A7A49A;
+}
+
+.hero-description span {
+    color: #F5D76E;
+    font-weight: 600;
 }
 /* =========================
    НАШИ ПРЕИМУЩЕСТВА
@@ -415,7 +424,7 @@ input {
 
     margin-bottom: 28px;
 
-    border: 1px solid rgba(156, 255, 0, 0.35);
+    border: 1px solid rgba(245, 215, 110, 0.35);
     border-radius: 50%;
 
     font-size: 42px;
@@ -424,7 +433,7 @@ input {
     color: var(--green);
 
     text-shadow:
-        0 0 15px rgba(156, 255, 0, 0.35);
+        0 0 15px rgba(245, 215, 110, 0.35);
 
     transition: all 0.3s ease;
 }
@@ -435,7 +444,7 @@ input {
     border-color: var(--green);
 
     box-shadow:
-        0 0 25px rgba(156, 255, 0, 0.15);
+        0 0 25px rgba(245, 215, 110, 0.15);
 }
 
 
@@ -545,12 +554,12 @@ input {
     color: #071000;
 
     box-shadow:
-        0 0 30px rgba(156, 255, 0, 0.2);
+        0 0 30px rgba(245, 215, 110, 0.2);
 }
 
 .button-primary:hover {
     box-shadow:
-        0 0 45px rgba(156, 255, 0, 0.4);
+        0 0 45px rgba(245, 215, 110, 0.4);
 
     transform: translateY(-2px);
 }
@@ -634,7 +643,7 @@ input {
     border: 1px solid var(--border);
     border-radius: 10px;
 
-    background: rgba(11, 15, 12, 0.95);
+    background: rgba(10, 10, 10, 0.95);
 
     box-shadow:
         0 0 50px rgba(0,0,0,0.4);
@@ -717,7 +726,7 @@ input {
 .product-card {
     overflow: hidden;
 
-    background: #0b0f0c;
+    background: #0C0C0B;
 
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 8px;
@@ -737,20 +746,20 @@ input {
     background:
         radial-gradient(
             circle at center,
-            rgba(156,255,0,0.15),
+            rgba(245,215,110,0.15),
             transparent 55%
         ),
         linear-gradient(
             135deg,
-            #182017,
+            #11110F,
             #050605
         );
 }
 
 .image-one {
     background:
-        radial-gradient(circle, rgba(156,255,0,.25), transparent 50%),
-        linear-gradient(135deg,#24351c,#050605);
+        radial-gradient(circle, rgba(245,215,110,.25), transparent 50%),
+        linear-gradient(135deg,#15140F,#050605);
 }
 
 .image-two {
@@ -809,7 +818,7 @@ input {
 /* ================= PROJECTS ================= */
 
 .projects {
-    background: #080b09;
+    background: #050505;
 }
 
 .project-grid {
@@ -848,12 +857,12 @@ input {
     background:
         radial-gradient(
             circle at center,
-            rgba(156,255,0,.18),
+            rgba(245,215,110,.18),
             transparent 50%
         ),
         linear-gradient(
             135deg,
-            #182019,
+            #11110F,
             #050605
         );
 
@@ -884,10 +893,10 @@ input {
     background:
         radial-gradient(
             circle at 90% 50%,
-            rgba(156,255,0,.1),
+            rgba(245,215,110,.1),
             transparent 40%
         ),
-        #0a0e0b;
+        #0A0A09;
 }
 
 .contact-text h2 {
@@ -1434,7 +1443,7 @@ input {
 
 .projects {
     padding: 140px 0;
-    background: #080908;
+    background: #050505;
 }
 
 
@@ -1668,7 +1677,7 @@ input {
 
 .projects {
     padding: 140px 0;
-    background: #080908;
+    background: #050505;
 }
 
 .projects-header {
@@ -1780,7 +1789,7 @@ input {
     background:
         radial-gradient(
             circle at 60% 40%,
-            rgba(156, 255, 0, 0.25),
+            rgba(245, 215, 110, 0.25),
             transparent 30%
         ),
         linear-gradient(
@@ -1794,7 +1803,7 @@ input {
     background:
         radial-gradient(
             circle at 40% 30%,
-            rgba(156, 255, 0, 0.18),
+            rgba(245, 215, 110, 0.18),
             transparent 30%
         ),
         linear-gradient(
@@ -1808,7 +1817,7 @@ input {
     background:
         radial-gradient(
             circle at 65% 45%,
-            rgba(156, 255, 0, 0.20),
+            rgba(245, 215, 110, 0.20),
             transparent 28%
         ),
         linear-gradient(
@@ -2028,7 +2037,7 @@ input {
 }
 
 .work-step:hover {
-    background: rgba(156,255,0,.035);
+    background: rgba(245,215,110,.035);
 }
 
 
@@ -2057,7 +2066,7 @@ input {
     width: 32px;
     height: 32px;
 
-    border: 1px solid rgba(156,255,0,.25);
+    border: 1px solid rgba(245,215,110,.25);
     border-radius: 50%;
 
     color: var(--green);
@@ -2089,7 +2098,7 @@ input {
 }
 
 .work-step:hover .work-line {
-    background: rgba(156,255,0,.35);
+    background: rgba(245,215,110,.35);
 }
 
 
@@ -2202,15 +2211,15 @@ input {
     background:
         radial-gradient(
             circle at 90% 50%,
-            rgba(156, 255, 0, 0.16),
+            rgba(245, 215, 110, 0.16),
             transparent 35%
         ),
         radial-gradient(
             circle at 10% 100%,
-            rgba(156, 255, 0, 0.06),
+            rgba(245, 215, 110, 0.06),
             transparent 30%
         ),
-        #0a0e0b;
+        #0A0A09;
 }
 
 /* лёгкое свечение внутри карточки */
@@ -2227,7 +2236,7 @@ input {
 
     border-radius: 50%;
 
-    background: rgba(156, 255, 0, 0.08);
+    background: rgba(245, 215, 110, 0.08);
     filter: blur(80px);
 
     pointer-events: none;
@@ -2262,8 +2271,8 @@ input {
     color: var(--green);
 
     text-shadow:
-        0 0 15px rgba(156, 255, 0, 0.25),
-        0 0 40px rgba(156, 255, 0, 0.08);
+        0 0 15px rgba(245, 215, 110, 0.25),
+        0 0 40px rgba(245, 215, 110, 0.08);
 }
 
 .contact-text p {
@@ -2320,11 +2329,11 @@ input {
 .contact-form input:focus {
     border-color: var(--green);
 
-    background: rgba(156, 255, 0, 0.03);
+    background: rgba(245, 215, 110, 0.03);
 
     box-shadow:
-        0 0 0 3px rgba(156, 255, 0, 0.06),
-        0 0 25px rgba(156, 255, 0, 0.05);
+        0 0 0 3px rgba(245, 215, 110, 0.06),
+        0 0 25px rgba(245, 215, 110, 0.05);
 }
 
 
@@ -2372,8 +2381,8 @@ input {
     transform: translateY(-3px);
 
     box-shadow:
-        0 10px 35px rgba(156, 255, 0, 0.2),
-        0 0 20px rgba(156, 255, 0, 0.1);
+        0 10px 35px rgba(245, 215, 110, 0.2),
+        0 0 20px rgba(245, 215, 110, 0.1);
 }
 
 .contact-form button:hover span {
@@ -2456,7 +2465,7 @@ input {
     right: -250px;
     top: 50px;
     border-radius: 50%;
-    background: rgba(156, 255, 0, 0.045);
+    background: rgba(245, 215, 110, 0.045);
     filter: blur(100px);
     pointer-events: none;
 }
@@ -2492,8 +2501,8 @@ input {
     color: var(--green);
 
     text-shadow:
-        0 0 20px rgba(156, 255, 0, 0.08),
-        0 0 50px rgba(156, 255, 0, 0.04);
+        0 0 20px rgba(245, 215, 110, 0.08),
+        0 0 50px rgba(245, 215, 110, 0.04);
 }
 
 
@@ -2575,11 +2584,11 @@ input {
 .product-card:hover {
     transform: translateY(-8px);
 
-    border-color: rgba(156,255,0,0.35);
+    border-color: rgba(245,215,110,0.35);
 
     box-shadow:
         0 25px 60px rgba(0,0,0,0.45),
-        0 0 35px rgba(156,255,0,0.05);
+        0 0 35px rgba(245,215,110,0.05);
 }
 
 
@@ -2680,7 +2689,7 @@ input {
 
     padding: 150px 0;
 
-    background: #080908;
+    background: #050505;
     overflow: hidden;
 }
 
@@ -3038,7 +3047,7 @@ input {
     position: relative;
     width: 100%;
     padding: 140px 0;
-    background: #080908;
+    background: #050505;
     overflow: hidden;
 }
 
@@ -3112,7 +3121,7 @@ input {
     align-items: center;
     gap: 14px;
     padding: 15px 20px;
-    border: 1px solid rgba(156, 255, 0, .3);
+    border: 1px solid rgba(245, 215, 110, .3);
     border-radius: 6px;
     text-decoration: none;
     font-size: 11px;
@@ -3120,7 +3129,7 @@ input {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: #f5f7f4;
-    background: rgba(156, 255, 0, .03);
+    background: rgba(245, 215, 110, .03);
     transition: background .3s ease, border-color .3s ease,
                 transform .3s ease, color .3s ease;
 }
@@ -3132,7 +3141,7 @@ input {
 }
 
 .projects-all:hover {
-    background: rgba(156, 255, 0, .1);
+    background: rgba(245, 215, 110, .1);
     border-color: var(--green);
     transform: translateY(-2px);
 }
@@ -3264,7 +3273,7 @@ input {
     background:
         radial-gradient(
             circle at 80% 45%,
-            rgba(156, 255, 0, .10),
+            rgba(245, 215, 110, .10),
             transparent 32%
         ),
         #050605;
@@ -3277,7 +3286,7 @@ input {
     bottom: -250px;
     width: 600px;
     height: 600px;
-    border: 1px solid rgba(156, 255, 0, .10);
+    border: 1px solid rgba(245, 215, 110, .10);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -3288,7 +3297,7 @@ input {
     right: 10%;
     width: 280px;
     height: 280px;
-    background: rgba(156, 255, 0, .08);
+    background: rgba(245, 215, 110, .08);
     filter: blur(100px);
     border-radius: 50%;
     pointer-events: none;
@@ -3384,7 +3393,7 @@ input {
 
 .services-catalog {
     padding: 150px 0;
-    background: #080908;
+    background: #050505;
 }
 
 .services-catalog-heading {
@@ -3428,7 +3437,7 @@ input {
     overflow: hidden;
     border: 1px solid rgba(255,255,255,.08);
     border-radius: 12px;
-    background: #0c100d;
+    background: #0A0A0A;
 }
 
 .service-item-reverse {
@@ -3450,7 +3459,7 @@ input {
     background:
         radial-gradient(
             circle at 50% 45%,
-            rgba(156,255,0,.22),
+            rgba(245,215,110,.22),
             transparent 30%
         ),
         linear-gradient(
@@ -3468,7 +3477,7 @@ input {
         linear-gradient(
             135deg,
             transparent 30%,
-            rgba(156,255,0,.08),
+            rgba(245,215,110,.08),
             transparent 70%
         );
     transition: transform .8s ease;
@@ -3482,27 +3491,27 @@ input {
     background:
         radial-gradient(
             circle at 50% 40%,
-            rgba(156,255,0,.25),
+            rgba(245,215,110,.25),
             transparent 28%
         ),
-        linear-gradient(135deg, #161b17, #050605);
+        linear-gradient(135deg, #11110F, #050605);
 }
 
 .service-image-2 {
     background:
         radial-gradient(
             circle at 55% 45%,
-            rgba(156,255,0,.30),
+            rgba(245,215,110,.30),
             transparent 25%
         ),
-        linear-gradient(135deg, #101512, #050605);
+        linear-gradient(135deg, #0E0E0C, #050605);
 }
 
 .service-image-3 {
     background:
         radial-gradient(
             circle at 45% 50%,
-            rgba(156,255,0,.22),
+            rgba(245,215,110,.22),
             transparent 25%
         ),
         linear-gradient(135deg, #181b18, #070807);
@@ -3512,7 +3521,7 @@ input {
     background:
         radial-gradient(
             circle at 50% 50%,
-            rgba(156,255,0,.28),
+            rgba(245,215,110,.28),
             transparent 26%
         ),
         linear-gradient(135deg, #121713, #050605);
@@ -3607,7 +3616,7 @@ input {
     gap: 14px;
     width: fit-content;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(156,255,0,.35);
+    border-bottom: 1px solid rgba(245,215,110,.35);
     text-decoration: none;
     font-size: 11px;
     font-weight: 800;
@@ -3676,14 +3685,14 @@ input {
     padding: 30px;
     border: 1px solid rgba(255,255,255,.08);
     border-radius: 8px;
-    background: #0b0f0c;
+    background: #0C0C0B;
     transition: transform .3s ease,
                 border-color .3s ease;
 }
 
 .process-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(156,255,0,.35);
+    border-color: rgba(245,215,110,.35);
 }
 
 .process-card > span {
@@ -3719,15 +3728,15 @@ input {
     position: relative;
     overflow: hidden;
     padding: 90px;
-    border: 1px solid rgba(156,255,0,.15);
+    border: 1px solid rgba(245,215,110,.15);
     border-radius: 16px;
     background:
         radial-gradient(
             circle at 85% 50%,
-            rgba(156,255,0,.15),
+            rgba(245,215,110,.15),
             transparent 35%
         ),
-        #0b0f0c;
+        #0C0C0B;
 }
 
 .services-cta-box::after {
@@ -3737,7 +3746,7 @@ input {
     bottom: -220px;
     width: 500px;
     height: 500px;
-    border: 1px solid rgba(156,255,0,.10);
+    border: 1px solid rgba(245,215,110,.10);
     border-radius: 50%;
 }
 
@@ -4022,12 +4031,12 @@ input {
     background:
         radial-gradient(
             circle at 78% 45%,
-            rgba(156,255,0,.14),
+            rgba(245,215,110,.14),
             transparent 28%
         ),
         radial-gradient(
             circle at 20% 80%,
-            rgba(156,255,0,.05),
+            rgba(245,215,110,.05),
             transparent 30%
         ),
         #050605;
@@ -4042,7 +4051,7 @@ input {
 
     border-radius: 50%;
 
-    background: rgba(156,255,0,.06);
+    background: rgba(245,215,110,.06);
     filter: blur(100px);
 
     pointer-events: none;
@@ -4095,7 +4104,7 @@ input {
     color: var(--green);
 
     text-shadow:
-        0 0 25px rgba(156,255,0,.18);
+        0 0 25px rgba(245,215,110,.18);
 }
 
 
@@ -4170,7 +4179,7 @@ input {
 .projects-gallery {
     padding: 150px 0 170px;
 
-    background: #080908;
+    background: #050505;
 }
 
 
@@ -4256,7 +4265,7 @@ input {
 .project-filter:hover {
     transform: translateY(-2px);
 
-    border-color: rgba(156,255,0,.35);
+    border-color: rgba(245,215,110,.35);
 
     color: #fff;
 }
@@ -4293,7 +4302,7 @@ input {
 .gallery-project:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(156,255,0,.28);
+    border-color: rgba(245,215,110,.28);
 
     box-shadow:
         0 25px 70px rgba(0,0,0,.45);
@@ -4532,7 +4541,7 @@ input {
 .projects-page-cta {
     padding: 0 0 150px;
 
-    background: #080908;
+    background: #050505;
 }
 
 
@@ -4543,16 +4552,16 @@ input {
 
     padding: 85px;
 
-    border: 1px solid rgba(156,255,0,.18);
+    border: 1px solid rgba(245,215,110,.18);
     border-radius: 20px;
 
     background:
         radial-gradient(
             circle at 85% 50%,
-            rgba(156,255,0,.16),
+            rgba(245,215,110,.16),
             transparent 30%
         ),
-        #0b0f0c;
+        #0C0C0B;
 }
 
 
@@ -4564,7 +4573,7 @@ input {
     right: -20px;
     bottom: -55px;
 
-    color: rgba(156,255,0,.025);
+    color: rgba(245,215,110,.025);
 
     font-size: 180px;
     font-weight: 900;
@@ -4745,12 +4754,12 @@ input {
     background:
         radial-gradient(
             circle at 80% 45%,
-            rgba(156,255,0,.13),
+            rgba(245,215,110,.13),
             transparent 28%
         ),
         radial-gradient(
             circle at 20% 85%,
-            rgba(156,255,0,.05),
+            rgba(245,215,110,.05),
             transparent 30%
         ),
         #050605;
@@ -4767,7 +4776,7 @@ input {
 
     border-radius: 50%;
 
-    background: rgba(156,255,0,.055);
+    background: rgba(245,215,110,.055);
 
     filter: blur(100px);
 
@@ -4821,7 +4830,7 @@ input {
     color: var(--green);
 
     text-shadow:
-        0 0 25px rgba(156,255,0,.18);
+        0 0 25px rgba(245,215,110,.18);
 }
 
 
@@ -4890,7 +4899,7 @@ input {
 .about-intro {
     padding: 150px 0;
 
-    background: #080908;
+    background: #050505;
 }
 
 
@@ -4995,12 +5004,12 @@ input {
     background:
         radial-gradient(
             circle at 50% 45%,
-            rgba(156,255,0,.18),
+            rgba(245,215,110,.18),
             transparent 30%
         ),
         linear-gradient(
             135deg,
-            #0b0f0c,
+            #0C0C0B,
             #172019 50%,
             #050605
         );
@@ -5017,7 +5026,7 @@ input {
 
     transform: translate(-50%, -50%);
 
-    color: rgba(156,255,0,.06);
+    color: rgba(245,215,110,.06);
 
     font-size: 380px;
     font-weight: 900;
@@ -5106,7 +5115,7 @@ input {
 .about-numbers {
     padding: 130px 0;
 
-    background: #080908;
+    background: #050505;
 }
 
 
@@ -5266,7 +5275,7 @@ input {
 .about-approach-card:hover {
     transform: translateY(-6px);
 
-    border-color: rgba(156,255,0,.3);
+    border-color: rgba(245,215,110,.3);
 
     background: #0c110d;
 }
@@ -5310,7 +5319,7 @@ input {
 .about-values {
     padding: 150px 0;
 
-    background: #080908;
+    background: #050505;
 }
 
 
@@ -5397,7 +5406,7 @@ input {
 .about-cta {
     padding: 0 0 150px;
 
-    background: #080908;
+    background: #050505;
 }
 
 
@@ -5408,16 +5417,16 @@ input {
 
     padding: 85px;
 
-    border: 1px solid rgba(156,255,0,.18);
+    border: 1px solid rgba(245,215,110,.18);
     border-radius: 20px;
 
     background:
         radial-gradient(
             circle at 85% 50%,
-            rgba(156,255,0,.16),
+            rgba(245,215,110,.16),
             transparent 30%
         ),
-        #0b0f0c;
+        #0C0C0B;
 }
 
 
@@ -5429,7 +5438,7 @@ input {
     right: -15px;
     bottom: -70px;
 
-    color: rgba(156,255,0,.025);
+    color: rgba(245,215,110,.025);
 
     font-size: 220px;
     font-weight: 900;
@@ -5649,7 +5658,7 @@ input {
     background:
         radial-gradient(
             circle at 80% 50%,
-            rgba(156,255,0,.12),
+            rgba(245,215,110,.12),
             transparent 30%
         ),
         #050605;
@@ -5666,7 +5675,7 @@ input {
 
     border-radius: 50%;
 
-    background: rgba(156,255,0,.05);
+    background: rgba(245,215,110,.05);
 
     filter: blur(100px);
 
@@ -5717,7 +5726,7 @@ input {
     color: var(--green);
 
     text-shadow:
-        0 0 30px rgba(156,255,0,.15);
+        0 0 30px rgba(245,215,110,.15);
 }
 
 .reviews-hero-content p {
@@ -5738,7 +5747,7 @@ input {
 .reviews-section {
     padding: 140px 0;
 
-    background: #080908;
+    background: #050505;
 }
 
 .reviews-heading {
@@ -5806,7 +5815,7 @@ input {
     border: 1px solid rgba(255,255,255,.09);
     border-radius: 14px;
 
-    background: #0b0f0c;
+    background: #0C0C0B;
 
     transition:
         transform .4s ease,
@@ -5816,7 +5825,7 @@ input {
 .review-card:hover {
     transform: translateY(-6px);
 
-    border-color: rgba(156,255,0,.28);
+    border-color: rgba(245,215,110,.28);
 }
 
 .review-featured {
@@ -5827,10 +5836,10 @@ input {
     background:
         radial-gradient(
             circle at 80% 20%,
-            rgba(156,255,0,.08),
+            rgba(245,215,110,.08),
             transparent 35%
         ),
-        #0b0f0c;
+        #0C0C0B;
 }
 
 .review-top {
@@ -5851,7 +5860,7 @@ input {
 }
 
 .review-mark {
-    color: rgba(156,255,0,.2);
+    color: rgba(245,215,110,.2);
 
     font-size: 70px;
 
@@ -5899,7 +5908,7 @@ input {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(156,255,0,.3);
+    border: 1px solid rgba(245,215,110,.3);
 
     color: var(--green);
 
@@ -5947,10 +5956,10 @@ input {
     background:
         radial-gradient(
             circle at 90% 50%,
-            rgba(156,255,0,.1),
+            rgba(245,215,110,.1),
             transparent 35%
         ),
-        #0a0e0b;
+        #0A0A09;
 }
 
 .reviews-trust-text h2 {
@@ -6024,16 +6033,16 @@ input {
 .reviews-cta-box {
     padding: 90px;
 
-    border: 1px solid rgba(156,255,0,.18);
+    border: 1px solid rgba(245,215,110,.18);
     border-radius: 18px;
 
     background:
         radial-gradient(
             circle at 85% 50%,
-            rgba(156,255,0,.12),
+            rgba(245,215,110,.12),
             transparent 35%
         ),
-        #0a0e0b;
+        #0A0A09;
 }
 
 .reviews-cta-box h2 {
@@ -6172,7 +6181,7 @@ input {
     background:
         radial-gradient(
             circle at 80% 45%,
-            rgba(156,255,0,.11),
+            rgba(245,215,110,.11),
             transparent 30%
         ),
         #050605;
@@ -6189,7 +6198,7 @@ input {
 
     border-radius: 50%;
 
-    background: rgba(156,255,0,.05);
+    background: rgba(245,215,110,.05);
 
     filter: blur(100px);
 
@@ -6240,7 +6249,7 @@ input {
     color: var(--green);
 
     text-shadow:
-        0 0 30px rgba(156,255,0,.15);
+        0 0 30px rgba(245,215,110,.15);
 }
 
 .contacts-hero-content p {
@@ -6261,7 +6270,7 @@ input {
 .contacts-section {
     padding: 140px 0;
 
-    background: #080908;
+    background: #050505;
 }
 
 .contacts-layout {
@@ -6354,10 +6363,10 @@ input {
     background:
         radial-gradient(
             circle at 100% 0%,
-            rgba(156,255,0,.08),
+            rgba(245,215,110,.08),
             transparent 30%
         ),
-        #0a0e0b;
+        #0A0A09;
 }
 
 .contacts-form-heading {
@@ -6450,7 +6459,7 @@ input {
 }
 
 .contacts-form select option {
-    background: #0b0f0c;
+    background: #0C0C0B;
     color: #fff;
 }
 
@@ -6547,7 +6556,7 @@ input {
 .location-meta span {
     padding: 9px 12px;
 
-    border: 1px solid rgba(156,255,0,.15);
+    border: 1px solid rgba(245,215,110,.15);
     border-radius: 50px;
 
     color: #818881;
@@ -6566,10 +6575,10 @@ input {
     background:
         radial-gradient(
             circle at 50% 50%,
-            rgba(156,255,0,.12),
+            rgba(245,215,110,.12),
             transparent 25%
         ),
-        #080b09;
+        #050505;
 }
 
 .location-grid {
@@ -6628,8 +6637,8 @@ input {
     background: var(--green);
 
     box-shadow:
-        0 0 0 8px rgba(156,255,0,.1),
-        0 0 30px rgba(156,255,0,.5);
+        0 0 0 8px rgba(245,215,110,.1),
+        0 0 30px rgba(245,215,110,.5);
 }
 
 
@@ -6644,16 +6653,16 @@ input {
 .contacts-final-box {
     padding: 90px;
 
-    border: 1px solid rgba(156,255,0,.18);
+    border: 1px solid rgba(245,215,110,.18);
     border-radius: 18px;
 
     background:
         radial-gradient(
             circle at 85% 50%,
-            rgba(156,255,0,.12),
+            rgba(245,215,110,.12),
             transparent 35%
         ),
-        #0a0e0b;
+        #0A0A09;
 }
 
 .contacts-final-box h2 {
@@ -6779,8 +6788,8 @@ input {
 }
 
 .contacts-page .contact-socials a:hover {
-    background: rgba(156,255,0,.08);
-    border-color: rgba(156,255,0,.35);
+    background: rgba(245,215,110,.08);
+    border-color: rgba(245,215,110,.35);
     transform: translateY(-2px);
 }
 
@@ -7430,7 +7439,7 @@ h6,
     background: transparent;
     border: 1.5px solid var(--green);
     transform: rotate(45deg);
-    box-shadow: 0 0 8px rgba(156, 255, 0, 0.35);
+    box-shadow: 0 0 8px rgba(245, 215, 110, 0.35);
 }
 .advantage-icon {
     width: 72px;
@@ -7441,10 +7450,10 @@ h6,
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(156,255,0,.2);
+    border: 1px solid rgba(245,215,110,.2);
     border-radius: 14px;
 
-    background: rgba(156,255,0,.025);
+    background: rgba(245,215,110,.025);
 
     transition:
         border-color .35s ease,
@@ -7463,15 +7472,15 @@ h6,
     stroke-linecap: round;
     stroke-linejoin: round;
 
-    filter: drop-shadow(0 0 6px rgba(156,255,0,.25));
+    filter: drop-shadow(0 0 6px rgba(245,215,110,.25));
 
     transition: transform .35s ease;
 }
 
 .advantage-item:hover .advantage-icon {
-    border-color: rgba(156,255,0,.55);
-    background: rgba(156,255,0,.06);
-    box-shadow: 0 0 30px rgba(156,255,0,.08);
+    border-color: rgba(245,215,110,.55);
+    background: rgba(245,215,110,.06);
+    box-shadow: 0 0 30px rgba(245,215,110,.08);
     transform: translateY(-4px);
 }
 
@@ -7545,4 +7554,697 @@ background-position: 150% center;
             rgba(5, 6, 5, 0.15)
         ),
         url("../assets/images/project-06-topiary.jpg") center / cover no-repeat;
+}
+/* =========================================================
+   TOPIAR — WARM GOLD / LIGHT STYLE
+   New visual accent
+========================================================= */
+
+:root {
+    --green: #F5D76E;
+    --green-dark: #B89632;
+
+    --black: #050505;
+    --card: #0C0C0B;
+
+    --border: rgba(245, 215, 110, 0.18);
+    --gray: #94928A;
+}
+
+
+/* ================= GLOBAL GLOW ================= */
+
+.logo-accent {
+    color: #F5D76E;
+
+    text-shadow:
+        0 0 10px rgba(255, 217, 102, 0.55),
+        0 0 25px rgba(255, 217, 102, 0.25);
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #F5D76E;
+}
+
+.nav a.active::after {
+    background: #F5D76E;
+    box-shadow:
+        0 0 10px rgba(255, 217, 102, 0.45);
+}
+
+
+/* ================= HEADER ================= */
+
+.phone span {
+    color: #F5D76E;
+}
+
+.header-button {
+    border-color: #F5D76E;
+}
+
+.header-button:hover {
+    background: #F5D76E;
+    color: #050505;
+    box-shadow:
+        0 0 25px rgba(255, 217, 102, 0.25);
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    background: #050505;
+}
+
+.hero-background {
+    background-image:
+        linear-gradient(
+            to bottom,
+            transparent 65%,
+            rgba(5, 5, 5, 0.55) 82%,
+            #050505 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.98) 0%,
+            rgba(5, 5, 5, 0.75) 32%,
+            rgba(5, 5, 5, 0.15) 70%
+        ),
+        url("../assets/images/hero.jpg");
+}
+
+.hero-background::after {
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255, 217, 102, 0.14),
+            transparent 55%
+        );
+}
+
+
+/* ================= HERO TEXT ================= */
+
+.eyebrow {
+    color: #F5D76E;
+}
+
+.eyebrow span {
+    background: #F5D76E;
+}
+
+.hero h1 strong {
+    color: #F5D76E;
+
+    text-shadow:
+        0 0 10px rgba(255, 217, 102, 0.50),
+        0 0 25px rgba(255, 217, 102, 0.25),
+        0 0 55px rgba(255, 217, 102, 0.12);
+}
+
+.hero-slogan {
+    color: #F5D76E;
+}
+
+.hero-scroll span {
+    color: #F5D76E;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.button-primary {
+    background: #F5D76E;
+    color: #080805;
+
+    box-shadow:
+        0 0 25px rgba(255, 217, 102, 0.20);
+}
+
+.button-primary:hover {
+    box-shadow:
+        0 0 45px rgba(255, 217, 102, 0.40);
+}
+
+.button-outline:hover {
+    border-color: #F5D76E;
+    color: #F5D76E;
+}
+
+
+/* ================= SECTION LABELS ================= */
+
+.section-label,
+.section-link {
+    color: #F5D76E;
+}
+
+
+/* ================= ADVANTAGES ================= */
+
+.advantage-icon {
+    border-color: rgba(245, 215, 110, 0.30);
+    color: #F5D76E;
+
+    text-shadow:
+        0 0 15px rgba(255, 217, 102, 0.35);
+}
+
+.advantage-item:hover .advantage-icon {
+    border-color: #F5D76E;
+
+    box-shadow:
+        0 0 25px rgba(255, 217, 102, 0.18);
+}
+
+
+/* ================= PRODUCTS ================= */
+
+.product-number,
+.product-content a {
+    color: #F5D76E;
+}
+
+.product-card:hover {
+    border-color: rgba(245, 215, 110, 0.35);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(255, 217, 102, 0.05);
+}
+
+
+/* ================= STATS ================= */
+
+.stat-icon {
+    color: #F5D76E;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-box {
+    border-color: rgba(245, 215, 110, 0.18);
+
+    background:
+        radial-gradient(
+            circle at 90% 50%,
+            rgba(255, 217, 102, 0.10),
+            transparent 40%
+        ),
+        #0A0A09;
+}
+
+.contact-text h2 strong {
+    color: #F5D76E;
+
+    text-shadow:
+        0 0 15px rgba(255, 217, 102, 0.25);
+}
+
+.contact-form input:focus {
+    border-color: #F5D76E;
+
+    box-shadow:
+        0 0 15px rgba(255, 217, 102, 0.08);
+}
+
+.contact-form button {
+    background: #F5D76E;
+    color: #080805;
+
+    box-shadow:
+        0 0 25px rgba(255, 217, 102, 0.18);
+}
+
+
+/* ================= ADVANTAGE SVG ================= */
+
+.advantage-icon svg {
+    stroke: #F5D76E;
+
+    filter:
+        drop-shadow(0 0 6px rgba(255, 217, 102, 0.30));
+}
+
+
+/* ================= SPECIAL EYEBROW MARK ================= */
+
+.hero .eyebrow-mark {
+    border-color: #F5D76E;
+
+    box-shadow:
+        0 0 8px rgba(255, 217, 102, 0.40),
+        0 0 18px rgba(255, 217, 102, 0.15);
+}
+/* =========================================================
+   FINAL GREEN → GOLD FIX
+========================================================= */
+
+/* Убираем старые зелёные градиенты */
+ .hero-background {
+    background-image:
+        linear-gradient(
+            to bottom,
+            transparent 45%,
+            rgba(5, 5, 5, 0.10) 60%,
+            rgba(5, 5, 5, 0.30) 72%,
+            rgba(5, 5, 5, 0.60) 86%,
+            #050505 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.98) 0%,
+            rgba(5, 5, 5, 0.75) 32%,
+            rgba(5, 5, 5, 0.15) 70%
+        ),
+        url("../assets/images/hero.jpg");
+}
+/* =========================================================
+   PROJECTS BUTTON
+========================================================= */
+
+.projects-all {
+    color: #F5D76E !important;
+    border-color: rgba(245, 215, 110, 0.45) !important;
+    background: rgba(245, 215, 110, 0.04) !important;
+
+    box-shadow: 0 0 0 rgba(245, 215, 110, 0);
+    
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.projects-all:hover {
+    color: #050505 !important;
+    background: #F5D76E !important;
+    border-color: #F5D76E !important;
+
+    box-shadow:
+        0 0 20px rgba(245, 215, 110, 0.25),
+        0 0 45px rgba(245, 215, 110, 0.10);
+
+    transform: translateY(-2px);
+}
+
+.projects-all::after {
+    color: #F5D76E !important;
+}
+/* =========================================================
+   REMOVE HARD-CODED GREEN
+========================================================= */
+
+[style*="156, 255, 0"],
+[style*="156,255,0"] {
+    color: #F5D76E !important;
+}
+
+svg {
+    stroke: #F5D76E;
+}
+
+svg[stroke="#F5D76E"] {
+    stroke: #F5D76E !important;
+}
+
+svg[fill="#F5D76E"] {
+    fill: #F5D76E !important;
+}
+/* =========================================================
+   FINAL GOLD HOVER STATES
+========================================================= */
+
+.how-we-work .work-step:hover,
+.work-step:hover {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(245, 215, 110, 0.08),
+            transparent 45%
+        ) !important;
+}
+
+.how-we-work .work-step:hover::before,
+.work-step:hover::before {
+    background: #F5D76E !important;
+}
+
+.how-we-work .work-step:hover .work-step-arrow,
+.work-step:hover .work-step-arrow {
+    background: #F5D76E !important;
+    color: #050505 !important;
+    border-color: #F5D76E !important;
+}
+/* ================================
+   КРУПНЫЕ ТЕКСТОВЫЕ БЛОКИ
+================================ */
+
+/* Текст в HERO */
+.hero-description {
+    max-width: 900px;
+    margin-top: 32px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    color: #F5F3EA;
+
+    text-shadow:
+        0 0 30px rgba(245, 215, 110, 0.08);
+}
+
+
+/* Текст в "Как мы работаем" */
+.work-header > p {
+    max-width: 650px;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+
+    color: #F5D76E;
+
+    text-shadow:
+        0 0 25px rgba(245, 215, 110, 0.12);
+}
+/* =================================
+   УВЕЛИЧЕННЫЙ ЛОГОТИП
+================================= */
+
+.logo {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.logo-main {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 32px !important;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.logo-subtitle {
+    font-family: "Manrope", sans-serif;
+    font-size: 10px !important;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.22em;
+    color: #A7A49A;
+}
+/* Услуги */
+.services-hero h1 {
+    font-size: clamp(55px, 9vw, 120px) !important;
+    letter-spacing: -5px;
+}
+
+/* Наши работы */
+.projects-page-content h1 {
+    font-size: clamp(55px, 9vw, 120px) !important;
+    letter-spacing: -5px;
+}
+
+/* О компании */
+.about-hero-content h1 {
+    font-size: clamp(55px, 9vw, 120px) !important;
+    letter-spacing: -5px;
+}
+
+/* Отзывы */
+.reviews-hero-content h1 {
+    font-size: clamp(55px, 9vw, 120px) !important;
+    letter-spacing: -5px;
+}
+
+/* Контакты */
+.contacts-hero-content h1 {
+    font-size: clamp(55px, 9vw, 120px) !important;
+    letter-spacing: -5px;
+}
+
+/* Финальный CTA */
+.contacts-final-box h2 {
+    font-size: clamp(50px, 7vw, 90px) !important;
+    letter-spacing: -4px;
+}
+/* ===== SECTION LABELS — CLEAN TOP POSITION ===== */
+
+.services-page .section-label,
+.projects-page .section-label,
+.about-page .section-label,
+.reviews-page .section-label,
+.contacts-page .section-label {
+    position: relative !important;
+
+    display: block !important;
+    width: fit-content !important;
+
+    margin: 0 0 32px 0 !important;
+    padding: 0 !important;
+
+    font-size: 10px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+    letter-spacing: 2.8px !important;
+
+    color: #F5D76E !important;
+    opacity: 0.75;
+}
+.hero-description {
+    max-width: 760px;
+    margin-top: 34px;
+
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(19px, 1.6vw, 24px);
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: -0.02em;
+
+    color: #A7A49A;
+}
+
+.hero-description span {
+    color: #F5D76E;
+    font-weight: 600;
+}
+/* =========================================
+   INTERNAL HERO — ПОДНИМАЕМ ЗАГОЛОВКИ
+   ========================================= */
+
+/* Услуги */
+.services-page .services-hero-content {
+    transform: translateY(-55px);
+}
+
+/* Проекты */
+.projects-page .projects-page-content {
+    transform: translateY(-55px);
+}
+
+/* О компании */
+.about-page .about-hero-content {
+    transform: translateY(-55px);
+}
+
+/* Отзывы */
+.reviews-page .reviews-hero-content {
+    transform: translateY(-55px);
+}
+
+/* Контакты */
+.contacts-page .contacts-hero-content {
+    transform: translateY(-55px);
+}
+.services-scroll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+/* =========================================
+   SCROLL LABEL — ОТЗЫВЫ + КОНТАКТЫ
+   ========================================= */
+
+.reviews-scroll,
+.contacts-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    
+    color: #A7A49A;
+    z-index: 5;
+}
+
+.reviews-scroll span,
+.contacts-scroll span {
+    color: #F5D76E;
+    font-size: 18px;
+    line-height: 1;
+}
+/* =========================================
+   REVIEWS + CONTACTS — FULLSCREEN HERO
+   ========================================= */
+
+.reviews-hero,
+.contacts-hero {
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Нижняя надпись */
+.reviews-scroll,
+.contacts-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    color: #A7A49A;
+    z-index: 10;
+}
+
+.reviews-scroll span,
+.contacts-scroll span {
+    color: #F5D76E;
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* Поднимаем основной контент, но не трогаем scroll */
+.reviews-hero-content,
+.contacts-hero-content {
+    transform: translateY(-55px);
+}
+
+/* Верхняя маленькая надпись */
+.reviews-hero-top,
+.contacts-hero-top {
+    transform: translateY(15px);
+}
+/* =========================================
+   ABOUT HERO — PREMIUM DESCRIPTION
+   ========================================= */
+
+.about-hero-description {
+    max-width: 520px;
+    padding-top: 8px;
+}
+
+.about-description-main {
+    margin: 0 0 22px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.55;
+    letter-spacing: -0.02em;
+    color: #F5F3EA;
+}
+
+.about-description-sub {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: #A7A49A;
+}
+
+.about-description-line {
+    width: 42px;
+    height: 1px;
+    margin: 28px 0 18px;
+    background: #F5D76E;
+    opacity: 0.9;
+}
+
+.about-description-caption {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    color: #F5D76E;
+}
+/* =========================================
+   PROJECTS HERO — PREMIUM DESCRIPTION
+   ========================================= */
+
+.projects-page-description {
+    max-width: 500px;
+    padding-top: 8px;
+}
+
+.projects-description-main {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.65;
+    letter-spacing: -0.015em;
+    color: #F5F3EA;
+}
+
+.projects-description-line {
+    width: 42px;
+    height: 1px;
+    margin: 28px 0 20px;
+    background: #F5D76E;
+    opacity: 0.9;
+}
+
+.projects-page-tags {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.projects-page-tags span {
+    position: relative;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    color: #A7A49A;
+}
+
+.projects-page-tags span:not(:last-child)::after {
+    content: "•";
+    position: absolute;
+    right: -17px;
+    color: #F5D76E;
+    opacity: 0.8;
 }
