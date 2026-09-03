@@ -7432,14 +7432,18 @@ h6,
 }
 
 .hero .eyebrow-mark {
-    width: 9px;
-    height: 9px;
-    flex: 0 0 9px;
-    display: block;
-    background: transparent;
-    border: 1.5px solid var(--green);
-    transform: rotate(45deg);
-    box-shadow: 0 0 8px rgba(245, 215, 110, 0.35);
+    width: auto;
+    height: auto;
+    flex: 0 0 auto;
+    display: inline-block;
+    background: none;
+    border: none;
+    transform: none;
+    box-shadow: none;
+
+    color: #F5D76E;
+    font-size: 18px;
+    line-height: 1;
 }
 .advantage-icon {
     width: 72px;
@@ -7793,10 +7797,9 @@ background-position: 150% center;
 /* ================= SPECIAL EYEBROW MARK ================= */
 
 .hero .eyebrow-mark {
-    border-color: #F5D76E;
-
-    box-shadow:
-        0 0 8px rgba(255, 217, 102, 0.40),
+    color: #F5D76E;
+    text-shadow:
+        0 0 8px rgba(255, 217, 102, 0.4),
         0 0 18px rgba(255, 217, 102, 0.15);
 }
 /* =========================================================
@@ -8247,4 +8250,51 @@ svg[fill="#F5D76E"] {
     right: -17px;
     color: #F5D76E;
     opacity: 0.8;
+}
+.city-lights {
+    position: relative;
+    display: inline-block;
+
+    color: #F5D76E;
+    -webkit-text-fill-color: #F5D76E;
+
+    /* Лампочки внутри букв */
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255, 248, 214, 0.95) 0px,
+            rgba(255, 248, 214, 0.95) 1.5px,
+            rgba(245, 215, 110, 0.55) 2px,
+            transparent 3px
+        );
+
+    background-size: 12px 12px;
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    /* Более мягкое свечение */
+    filter:
+        drop-shadow(0 0 3px rgba(245, 215, 110, 0.65))
+        drop-shadow(0 0 9px rgba(245, 215, 110, 0.3));
+
+    animation: cityLightsGlow 3.5s ease-in-out infinite;
+}
+
+@keyframes cityLightsGlow {
+    0%,
+    100% {
+        filter:
+            drop-shadow(0 0 3px rgba(245, 215, 110, 0.55))
+            drop-shadow(0 0 8px rgba(245, 215, 110, 0.25));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 4px rgba(245, 215, 110, 0.75))
+            drop-shadow(0 0 12px rgba(245, 215, 110, 0.35));
+    }
+}
+.hero-text {
+    transform: translateX(40px);
 }
