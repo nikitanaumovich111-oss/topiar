@@ -4747,7 +4747,7 @@ input {
     display: flex;
     align-items: center;
 
-    padding: 170px 0 100px;
+    padding: 180px 0 100px;
 
     overflow: hidden;
 
@@ -8061,7 +8061,7 @@ svg[fill="#F5D76E"] {
 
 /* О компании */
 .about-page .about-hero-content {
-    transform: translateY(-55px);
+    transform: translateY(-26px);
 }
 
 /* Отзывы */
@@ -8297,4 +8297,13 @@ svg[fill="#F5D76E"] {
 }
 .hero-text {
     transform: translateX(40px);
+}
+/* ABOUT — выравниваем верхний блок как на других внутренних страницах */
+.about-page .about-hero-top,
+.about-page .about-hero-content {
+    position: relative;
+    top: -55px;
+}
+.about-page .about-hero-top {
+    transform: translateY(84px);
 }
