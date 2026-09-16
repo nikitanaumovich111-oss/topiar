@@ -10,6 +10,8 @@ h3,
 h4,
 .logo-main {
     font-family: "Space Grotesk", sans-serif;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 /* ================= RESET ================= */
 
@@ -26,6 +28,7 @@ html {
 body {
     font-family: 'Manrope', sans-serif;
     background: #050605;
+    overflow-x: hidden;
     color: #ffffff;
     line-height: 1.5;
 }
@@ -9148,7 +9151,7 @@ svg[fill="#F5D76E"] {
     overflow: hidden;
     border: 1px solid var(--border);
 
-    background: url("../assets/images/constructor/led-topiary.jpg");
+    background: url("../assets/images/constructor/all.jpg");
     background-size: cover;
     background-position: center;
 }
