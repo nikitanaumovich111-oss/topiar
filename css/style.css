@@ -580,6 +580,13 @@ input {
     transform: translateY(-2px);
 }
 
+.button-primary:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
 .button-outline {
     border: 1px solid rgba(255,255,255,0.2);
 }
@@ -5138,24 +5145,22 @@ input {
 }
 
 
-.about-founder-visual::before {
-    content: "A";
-
+.about-founder-photo {
     position: absolute;
+    inset: 0;
 
-    left: 50%;
-    top: 50%;
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 6, 5, .88),
+            rgba(5, 6, 5, .25) 55%,
+            rgba(5, 6, 5, .55)
+        ),
+        url("../assets/images/about-first-project.jpg");
+    background-size: cover;
+    background-position: center;
 
-    transform: translate(-50%, -50%);
-
-    color: rgba(245,215,110,.06);
-
-    font-size: 380px;
-    font-weight: 900;
-
-    line-height: 1;
-
-    pointer-events: none;
+    border-radius: 17px;
 }
 
 
@@ -7850,6 +7855,14 @@ background-position: 150% center;
         0 0 45px rgba(255, 217, 102, 0.40);
 }
 
+.button-primary:disabled,
+.button-primary:disabled:hover {
+    opacity: .55;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
 .button-outline:hover {
     border-color: #F5D76E;
     color: #F5D76E;
@@ -7939,6 +7952,12 @@ background-position: 150% center;
 
     box-shadow:
         0 0 25px rgba(255, 217, 102, 0.18);
+}
+
+.contact-form button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    box-shadow: none;
 }
 
 
@@ -8603,126 +8622,126 @@ svg[fill="#F5D76E"] {
     }
 }
 
-/* СВЕТОВОЕ ОФОРМЛЕНИЕ — 20 слотов, файлы: assets/images/light-01.jpg ... light-20.jpg */
+/* СВЕТОВОЕ ОФОРМЛЕНИЕ — 16 слотов, файлы: assets/images/light-01.jpg ... light-16.jpg */
 .gallery-photo-light-01 {
-    background-image: url("../assets/images/light-01.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-01.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-02 {
-    background-image: url("../assets/images/light-02.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-02.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-03 {
-    background-image: url("../assets/images/light-03.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-03.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-04 {
-    background-image: url("../assets/images/light-04.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-04.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-05 {
-    background-image: url("../assets/images/light-05.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-05.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-06 {
-    background-image: url("../assets/images/light-06.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-06.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-07 {
-    background-image: url("../assets/images/light-07.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-07.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-08 {
-    background-image: url("../assets/images/light-08.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-08.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-09 {
-    background-image: url("../assets/images/light-09.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-09.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-10 {
-    background-image: url("../assets/images/light-10.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-10.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-11 {
-    background-image: url("../assets/images/light-11.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-11.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-12 {
-    background-image: url("../assets/images/light-12.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-12.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-13 {
-    background-image: url("../assets/images/light-13.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-13.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-14 {
-    background-image: url("../assets/images/light-14.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-14.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-15 {
-    background-image: url("../assets/images/light-15.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-15.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-light-16 {
-    background-image: url("../assets/images/light-16.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/light-16.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
-.gallery-photo-light-17 {
-    background-image: url("../assets/images/light-17.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
-}
-
-.gallery-photo-light-18 {
-    background-image: url("../assets/images/light-18.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
-}
-
-.gallery-photo-light-19 {
-    background-image: url("../assets/images/light-19.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
-}
-
-.gallery-photo-light-20 {
-    background-image: url("../assets/images/light-20.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
-}
-
-/* ТОПИАР — 10 слотов, файлы: assets/images/topiary-01.jpg ... topiary-10.jpg */
+/* ТОПИАР — 8 слотов, файлы: assets/images/topiary-01.jpg ... topiary-08.jpg */
 .gallery-photo-topiary-01 {
-    background-image: url("../assets/images/topiary-01.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/topiary-01.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-topiary-02 {
-    background-image: url("../assets/images/topiary-02.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/topiary-02.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-topiary-03 {
-    background-image: url("../assets/images/topiary-03.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/topiary-03.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-topiary-04 {
-    background-image: url("../assets/images/topiary-04.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/topiary-04.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-topiary-05 {
-    background-image: url("../assets/images/topiary-05.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/topiary-05.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-topiary-06 {
-    background-image: url("../assets/images/topiary-06.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/topiary-06.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-topiary-07 {
-    background-image: url("../assets/images/topiary-07.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/topiary-07.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%);
+    background-color: #0A0A09;
 }
 
 .gallery-photo-topiary-08 {
-    background-image: url("../assets/images/topiary-08.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
-}
-
-.gallery-photo-topiary-09 {
-    background-image: url("../assets/images/topiary-09.jpg"), radial-gradient(circle at 30% 30%, rgba(245,215,110,.10), transparent 60%), #0A0A09;
-}
-
-.gallery-photo-topiary-10 {
-    background-image: url("../assets/images/topiary-10.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%), #0A0A09;
+    background-image: url("../assets/images/topiary-08.jpg"), radial-gradient(circle at 70% 70%, rgba(245,215,110,.07), transparent 60%);
+    background-color: #0A0A09;
 }
 
 

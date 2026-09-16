@@ -20,18 +20,99 @@ if (mobileMenu && nav) {
 
 
 // ===============================
-// ФОРМА ЗАЯВКИ
+// ФОРМА ЗАЯВКИ — ОТПРАВКА В TELEGRAM
 // ===============================
+
+const TELEGRAM_BOT_TOKEN = '8757387500:AAG-XsWOtTvcBiEU5914Q5Q37QmQIpjO_q4';
+const TELEGRAM_CHAT_ID = '931492862';
+
+const SERVICE_LABELS = {
+    topiary: 'Топиарные конструкции',
+    light: 'Световые фигуры',
+    newyear: 'Новогоднее оформление',
+    individual: 'Индивидуальный проект'
+};
+
+async function sendLeadToTelegram(text) {
+
+    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: text
+        })
+    });
+
+    if (!response.ok) {
+        throw new Error('Telegram API error: ' + response.status);
+    }
+
+    return response.json();
+
+}
 
 const contactForms = document.querySelectorAll('.contact-form, .contacts-form');
 
 contactForms.forEach(contactForm => {
 
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', async (event) => {
 
         event.preventDefault();
 
-        alert('Спасибо! Мы свяжемся с вами.');
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonHTML = submitButton ? submitButton.innerHTML : '';
+
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.textContent = 'Отправляем...';
+        }
+
+        const formData = new FormData(contactForm);
+
+        const name = (formData.get('name') || '').toString().trim();
+        const phone = (formData.get('phone') || '').toString().trim();
+        const serviceValue = (formData.get('service') || '').toString().trim();
+        const message = (formData.get('message') || '').toString().trim();
+
+        const lines = [
+            '🔔 Новая заявка с сайта TOPIAR',
+            '',
+            `Имя: ${name || '—'}`,
+            `Телефон: ${phone || '—'}`
+        ];
+
+        if (serviceValue) {
+            lines.push(`Услуга: ${SERVICE_LABELS[serviceValue] || serviceValue}`);
+        }
+
+        if (message) {
+            lines.push(`Сообщение: ${message}`);
+        }
+
+        lines.push(`Страница: ${window.location.pathname}`);
+
+        try {
+
+            await sendLeadToTelegram(lines.join('\n'));
+
+            alert('Спасибо! Мы свяжемся с вами.');
+            contactForm.reset();
+
+        } catch (error) {
+
+            alert('Не получилось отправить заявку. Пожалуйста, позвоните нам напрямую: +375 29 697 20 80');
+
+        } finally {
+
+            if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonHTML;
+            }
+
+        }
 
     });
 
@@ -49,20 +130,16 @@ const constructorNote = document.getElementById('constructorNote');
 const constructorReset = document.querySelector('.constructor-reset');
 
 // Готовые фото-комбинации (лежат в assets/images/constructor/)
-// Ключ — теги через запятую в алфавитном порядке: arch, garland, led, topiary
+// Ключ — теги через запятую в алфавитном порядке: figures, fringe, neon
 const constructorPhotos = {
     '': 'base.jpg',
-    'topiary': 'topiary.jpg',
-    'arch': 'arch.jpg',
-    'garland': 'garland.jpg',
-    'led': 'led.jpg',
-    'arch,garland': 'arch-garland.jpg',
-    'arch,led': 'arch-led.jpg',
-    'led,topiary': 'led-topiary.jpg',
-    'garland,topiary': 'garland-topiary.jpg',
-    'arch,topiary': 'arch-topiary.jpg',
-    'arch,garland,topiary': 'arch-garland-topiary.jpg',
-    'arch,led,topiary': 'arch-led-topiary.jpg'
+    'figures': 'figures.jpg',
+    'fringe': 'fringe.jpg',
+    'neon': 'neon.jpg',
+    'figures,fringe': 'fringe-figures.jpg',
+    'figures,neon': 'figures-neon.jpg',
+    'fringe,neon': 'fringe-neon.jpg',
+    'figures,fringe,neon': 'all.jpg'
 };
 
 const constructorBasePath = 'assets/images/constructor/';
@@ -82,15 +159,6 @@ function updateConstructorStage() {
         .map(input => input.dataset.tag);
 
     let tags = checked.slice();
-    let showNote = false;
-
-    // Фото с одновременным сочетанием "гирлянда" + "LED" пока не готовы —
-    // показываем вариант без LED и предупреждаем об этом
-
-    if (tags.includes('garland') && tags.includes('led')) {
-        tags = tags.filter(tag => tag !== 'led');
-        showNote = true;
-    }
 
     tags.sort();
 
@@ -113,9 +181,7 @@ function updateConstructorStage() {
     }
 
     if (constructorNote) {
-        constructorNote.textContent = showNote
-            ? 'Фото с гирляндой и LED-подсветкой одновременно скоро добавим — сейчас показываем вариант без LED.'
-            : '';
+        constructorNote.textContent = '';
     }
 
 }
