@@ -1,0 +1,45 @@
+# TOPIAR — настройки для Apache (большинство PHP-хостингов)
+
+# Своя страница 404
+ErrorDocument 404 /404.html
+
+# Закрыть доступ к файлу с токеном, если он лежит рядом с сайтом
+<FilesMatch "^(config|topiar-config)\.php$">
+    Require all denied
+</FilesMatch>
+
+# Не показывать список файлов в папках
+Options -Indexes
+
+# Принудительный HTTPS — раскомментируйте ПОСЛЕ включения SSL-сертификата:
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Закрыть логи и служебные файлы
+<FilesMatch "\.(log|md)$">
+    Require all denied
+</FilesMatch>
+
+# Сжатие
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# Кеш в браузере
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+
+# Базовые заголовки безопасности
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
