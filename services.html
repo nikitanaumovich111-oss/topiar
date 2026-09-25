@@ -7,7 +7,43 @@
 
     <title>Услуги — TOPIAR</title>
 
+    <meta name="description" content="Услуги TOPIAR: топиарные конструкции, световые фигуры, новогоднее оформление и индивидуальные проекты под ключ — от идеи до монтажа.">
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#050605">
+    <link rel="canonical" href="https://topiar.by/services.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TOPIAR">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Услуги — TOPIAR">
+    <meta property="og:description" content="Услуги TOPIAR: топиарные конструкции, световые фигуры, новогоднее оформление и индивидуальные проекты под ключ — от идеи до монтажа.">
+    <meta property="og:url" content="https://topiar.by/services.html">
+    <meta property="og:image" content="https://topiar.by/assets/images/light-23.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Услуги — TOPIAR">
+    <meta name="twitter:description" content="Услуги TOPIAR: топиарные конструкции, световые фигуры, новогоднее оформление и индивидуальные проекты под ключ — от идеи до монтажа.">
+    <meta name="twitter:image" content="https://topiar.by/assets/images/light-23.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+
     <link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {"@type": "Question", "name": "Какая гарантия на конструкции?", "acceptedAnswer": {"@type": "Answer", "text": "Мы даём гарантию 5 лет на свои работы."}},
+        {"@type": "Question", "name": "В каких регионах вы работаете?", "acceptedAnswer": {"@type": "Answer", "text": "Производство находится в Бресте, проекты реализуем по всей Беларуси."}},
+        {"@type": "Question", "name": "Что входит в проект?", "acceptedAnswer": {"@type": "Answer", "text": "Мы ведём проект от идеи до готовой инсталляции: обсуждаем задачу, предлагаем варианты, изготавливаем и устанавливаем конструкцию."}},
+        {"@type": "Question", "name": "Можно заказать фигуру по своему эскизу?", "acceptedAnswer": {"@type": "Answer", "text": "Да. Для нестандартных задач есть индивидуальные проекты: расскажите, что хотите получить, и мы предложим решение."}},
+        {"@type": "Question", "name": "Как узнать стоимость?", "acceptedAnswer": {"@type": "Answer", "text": "Цена зависит от размера, материалов и сложности фигуры или композиции. Оставьте заявку или позвоните: +375 29 697 20 80, мы рассчитаем ваш проект."}},
+        {"@type": "Question", "name": "Вы работаете с организациями и городскими заказчиками?", "acceptedAnswer": {"@type": "Answer", "text": "Да, среди наших заказчиков есть предприятия и городские службы. Примеры смотрите на странице «С нами работают»."}}
+    ]
+}
+</script>
 </head>
 
 <body class="services-page">
@@ -35,7 +71,7 @@
             <a href="projects.html">Наши работы</a>
             <a href="constructor.html">Конструктор</a>
             <a href="about.html">О компании</a>
-            <a href="reviews.html">Отзывы</a>
+            <a href="partners.html">С нами работают</a>
             <a href="contacts.html">Контакты</a>
         </nav>
 
@@ -52,7 +88,7 @@
 
         </div>
 
-        <button class="mobile-menu">☰</button>
+        <button class="mobile-menu" type="button" aria-label="Открыть меню">☰</button>
 
     </div>
 </header>
@@ -66,7 +102,94 @@
 
 <section class="services-hero">
 
-    <div class="services-hero-glow"></div>
+
+    <!-- 3D лампочка -->
+    <div class="hero-lamp" aria-hidden="true">
+        <div class="lamp-glow"></div>
+        <div class="lamp-stage">
+            <div class="lamp-swing">
+                <span class="lamp-cable"></span>
+                <div class="lamp-bulb">
+
+                    <span class="lamp-ring lamp-ring-1"></span>
+                    <span class="lamp-ring lamp-ring-2"></span>
+                    <span class="lamp-ring lamp-ring-3"></span>
+
+                    <svg viewBox="0 0 300 440" xmlns="http://www.w3.org/2000/svg" class="lamp-svg">
+                        <defs>
+                            <radialGradient id="lampGlass" cx="50%" cy="66%" r="55%">
+                                <stop offset="0%" stop-color="#FFF9DC"/>
+                                <stop offset="30%" stop-color="#F8DF83" stop-opacity=".95"/>
+                                <stop offset="68%" stop-color="#F5D76E" stop-opacity=".30"/>
+                                <stop offset="100%" stop-color="#B89632" stop-opacity=".08"/>
+                            </radialGradient>
+                            <linearGradient id="lampMetal" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#3a3520"/>
+                                <stop offset="28%" stop-color="#F5D76E"/>
+                                <stop offset="50%" stop-color="#fff2b8"/>
+                                <stop offset="72%" stop-color="#B89632"/>
+                                <stop offset="100%" stop-color="#2a2616"/>
+                            </linearGradient>
+                            <linearGradient id="lampSocket" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#0b0b09"/>
+                                <stop offset="35%" stop-color="#2b2a24"/>
+                                <stop offset="60%" stop-color="#151512"/>
+                                <stop offset="100%" stop-color="#050605"/>
+                            </linearGradient>
+                            <filter id="lampBlur" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="6"/>
+                            </filter>
+                            <filter id="lampSoft" x="-50%" y="-50%" width="200%" height="200%">
+                                <feGaussianBlur stdDeviation="2.2"/>
+                            </filter>
+                        </defs>
+
+                        <!-- внутреннее свечение -->
+                        <circle class="lamp-inner-glow" cx="150" cy="290" r="82" fill="#F5D76E" filter="url(#lampBlur)"/>
+
+                        <!-- стекло -->
+                        <path d="M112 150 C112 185 55 215 50 290 A100 100 0 0 0 250 290 C245 215 188 185 188 150 Z"
+                              fill="url(#lampGlass)" stroke="rgba(255,240,180,.55)" stroke-width="1.5"/>
+
+                        <!-- нить накала -->
+                        <g class="lamp-filament" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M130 155 L130 240 L126 262 M170 155 L170 240 L174 262" stroke="#8a6d1f" stroke-width="2"/>
+                            <path d="M126 262 c6 -16 12 -16 12 0 s6 16 12 0 s12 -16 12 0 s6 16 12 0"
+                                  stroke="#FFF4C2" stroke-width="7" filter="url(#lampSoft)" opacity=".9"/>
+                            <path d="M126 262 c6 -16 12 -16 12 0 s6 16 12 0 s12 -16 12 0 s6 16 12 0"
+                                  stroke="#ffffff" stroke-width="2.4"/>
+                        </g>
+
+                        <!-- блик -->
+                        <ellipse cx="102" cy="262" rx="11" ry="38" transform="rotate(-22 102 262)"
+                                 fill="#fff" opacity=".32" filter="url(#lampSoft)"/>
+                        <path d="M84 318 A78 78 0 0 0 128 366" fill="none" stroke="#fff" stroke-opacity=".28"
+                              stroke-width="3" stroke-linecap="round"/>
+
+                        <!-- цоколь -->
+                        <rect x="112" y="96" width="76" height="11" rx="5.5" fill="url(#lampMetal)"/>
+                        <rect x="112" y="108" width="76" height="11" rx="5.5" fill="url(#lampMetal)"/>
+                        <rect x="112" y="120" width="76" height="11" rx="5.5" fill="url(#lampMetal)"/>
+                        <rect x="113" y="132" width="74" height="14" rx="6" fill="url(#lampMetal)"/>
+
+                        <!-- патрон -->
+                        <rect x="102" y="34" width="96" height="62" rx="9" fill="url(#lampSocket)" stroke="rgba(245,215,110,.25)"/>
+                        <rect x="102" y="56" width="96" height="5" fill="url(#lampMetal)" opacity=".85"/>
+                        <rect x="126" y="12" width="48" height="24" rx="6" fill="url(#lampSocket)" stroke="rgba(245,215,110,.25)"/>
+                    </svg>
+
+                    <span class="lamp-spark" style="--x:-95px;--y:-40px;--d:0s;--t:4.2s"></span>
+                    <span class="lamp-spark" style="--x:105px;--y:-70px;--d:.8s;--t:5s"></span>
+                    <span class="lamp-spark" style="--x:-130px;--y:40px;--d:1.6s;--t:4.6s"></span>
+                    <span class="lamp-spark" style="--x:135px;--y:30px;--d:2.2s;--t:5.4s"></span>
+                    <span class="lamp-spark" style="--x:-60px;--y:110px;--d:.4s;--t:4.8s"></span>
+                    <span class="lamp-spark" style="--x:70px;--y:120px;--d:2.8s;--t:4.4s"></span>
+                    <span class="lamp-spark" style="--x:10px;--y:-110px;--d:1.2s;--t:5.2s"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="container">
 
@@ -90,23 +213,6 @@
                     НАШИ<br>
                     <span>УСЛУГИ</span>
                 </h1>
-
-            </div>
-
-            <div class="services-hero-description">
-
-                <p>
-                    Создаём световые, декоративные
-                    и городские инсталляции, которые
-                    превращают обычное пространство
-                    в место, которое хочется запомнить.
-                </p>
-
-                <div class="services-hero-meta">
-                    <span>ИДЕЯ</span>
-                    <span>ПРОИЗВОДСТВО</span>
-                    <span>МОНТАЖ</span>
-                </div>
 
             </div>
 
@@ -284,10 +390,6 @@
         <article class="service-item" id="newyear">
 
             <div class="service-item-image service-image-3">
-                <div class="service-image-mark">
-                    NEW YEAR
-                </div>
-
                 <span class="service-item-number">
                     03
                 </span>
@@ -485,6 +587,54 @@
      CTA
 ========================= -->
 
+<section class="faq-section" id="faq">
+
+    <div class="container">
+
+        <h2 class="faq-title">
+            ЧАСТЫЕ<br>
+            <span>ВОПРОСЫ</span>
+        </h2>
+
+        <div class="faq-list">
+
+            <details class="faq-item">
+                <summary>Какая гарантия на конструкции?</summary>
+                <p>Мы даём гарантию 5 лет на свои работы.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>В каких регионах вы работаете?</summary>
+                <p>Производство находится в Бресте, проекты реализуем по всей Беларуси.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Что входит в проект?</summary>
+                <p>Мы ведём проект от идеи до готовой инсталляции: обсуждаем задачу, предлагаем варианты, изготавливаем и устанавливаем конструкцию.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Можно заказать фигуру по своему эскизу?</summary>
+                <p>Да. Для нестандартных задач есть индивидуальные проекты: расскажите, что хотите получить, и мы предложим решение.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Как узнать стоимость?</summary>
+                <p>Цена зависит от размера, материалов и сложности фигуры или композиции. Оставьте заявку или позвоните: +375 29 697 20 80, мы рассчитаем ваш проект.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Вы работаете с организациями и городскими заказчиками?</summary>
+                <p>Да, среди наших заказчиков есть предприятия и городские службы. Примеры смотрите на странице «С нами работают».</p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <section class="services-cta">
 
     <div class="container">
@@ -525,106 +675,131 @@
 
 <footer class="footer">
 
-    <div class="container">
+    <div class="container footer-grid">
 
-        <div class="footer-top">
+        <div class="footer-brand">
 
-            <div class="footer-brand">
+            <a href="index.html" class="logo">
 
-                <a href="index.html" class="logo">
+                <span class="logo-main">
+                    TOPI<span class="logo-accent">AR</span>
+                </span>
 
-                    <span class="logo-main">
-                        TOPI<span class="logo-accent">AR</span>
-                    </span>
+                <span class="logo-subtitle">
+                    ЯРКИЕ РЕШЕНИЯ
+                </span>
 
-                    <span class="logo-subtitle">
-                        ЯРКИЕ РЕШЕНИЯ
-                    </span>
+            </a>
 
-                </a>
-
-                <p>
-                    Делаем города ярче.
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Навигация</h4>
-
-                <a href="index.html">Главная</a>
-                <a href="services.html">Услуги</a>
-                <a href="projects.html">Наши работы</a>
-                <a href="constructor.html">Конструктор</a>
-                <a href="about.html">О компании</a>
-                <a href="reviews.html">Отзывы</a>
-                <a href="contacts.html">Контакты</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Услуги</h4>
-
-                <a href="#topiary">
-                    Топиарные конструкции
-                </a>
-
-                <a href="#light">
-                    Световые фигуры
-                </a>
-
-                <a href="#newyear">
-                    Новогоднее оформление
-                </a>
-
-                <a href="#individual">
-                    Индивидуальные проекты
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Контакты</h4>
-
-                <a href="tel:+375296972080">
-                    +375 29 697 20 80
-                </a>
-
-                <a href="mailto:info@topiar.by">
-                    info@topiar.by
-                </a>
-
-                <a href="contacts.html">
-                    Все контакты →
-                </a>
-
-            </div>
+            <p>
+                Производство каркасов садовых фигур
+                под озеленение и световых объёмных фигур.
+            </p>
 
         </div>
 
 
-        <div class="footer-bottom">
+        <div class="footer-column">
+
+            <h4>Навигация</h4>
+
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="projects.html">Наши работы</a>
+
+            <a href="constructor.html">Конструктор</a>
+            <a href="about.html">О компании</a>
+            <a href="partners.html">С нами работают</a>
+            <a href="contacts.html">Контакты</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Услуги</h4>
+
+            <a href="services.html#topiary">
+                Топиарные конструкции
+            </a>
+
+            <a href="services.html#light">
+                Световые фигуры
+            </a>
+
+            <a href="services.html#newyear">
+                Новогоднее оформление
+            </a>
+
+            <a href="services.html#individual">
+                Индивидуальные проекты
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Контакты</h4>
+
+            <a href="tel:+375296972080">
+                +375 29 697 20 80
+            </a>
+
+            <a href="tel:+375336962080">
+                +375 33 696 20 80
+            </a>
+
+            <a href="mailto:info@topiar.by">
+                info@topiar.by
+            </a>
 
             <span>
-                © 2026 TOPIAR
-            </span>
-
-            <span>
-                СВЕТОВЫЕ ИНСТАЛЛЯЦИИ
+                Брест, Беларусь
             </span>
 
         </div>
 
     </div>
 
+
+    <div class="container footer-bottom">
+
+        <span>
+            © 2026 TOPIAR. Все права защищены.
+        </span>
+
+        <a href="privacy.html">Политика конфиденциальности</a>
+
+    </div>
+
 </footer>
 
+
+<script>
+(function () {
+    var hero = document.querySelector('.services-hero');
+    var lamp = document.querySelector('.hero-lamp');
+    if (!hero || !lamp || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var tx = 0, ty = 0, cx = 0, cy = 0, run = false;
+    function kick() { if (!run) { run = true; requestAnimationFrame(tick); } }
+    function tick() {
+        cx += (tx - cx) * 0.06;
+        cy += (ty - cy) * 0.06;
+        lamp.style.setProperty('--ry', (cx * 18).toFixed(2) + 'deg');
+        lamp.style.setProperty('--rx', (-cy * 9).toFixed(2) + 'deg');
+        if (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) requestAnimationFrame(tick);
+        else run = false;
+    }
+    hero.addEventListener('mousemove', function (e) {
+        var r = hero.getBoundingClientRect();
+        tx = ((e.clientX - r.left) / r.width - 0.5) * 2;
+        ty = ((e.clientY - r.top) / r.height - 0.5) * 2;
+        kick();
+    });
+    hero.addEventListener('mouseleave', function () { tx = 0; ty = 0; kick(); });
+})();
+</script>
 
 <script src="js/main.js"></script>
 

@@ -8,8 +8,64 @@
 
     <meta
         name="description"
-        content="Производство каркасов садовых фигур, световых композиций и объёмных фигур."
+        content="Производство каркасов садовых фигур под озеленение, световых объёмных фигур и новогоднего оформления. Брест, работаем по всей Беларуси."
     >
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#050605">
+    <link rel="canonical" href="https://topiar.by/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TOPIAR">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="TOPIAR — Делаем города ярче">
+    <meta property="og:description" content="Производство каркасов садовых фигур под озеленение, световых объёмных фигур и новогоднего оформления. Брест, работаем по всей Беларуси.">
+    <meta property="og:url" content="https://topiar.by/">
+    <meta property="og:image" content="https://topiar.by/assets/images/light-23.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TOPIAR — Делаем города ярче">
+    <meta name="twitter:description" content="Производство каркасов садовых фигур под озеленение, световых объёмных фигур и новогоднего оформления. Брест, работаем по всей Беларуси.">
+    <meta name="twitter:image" content="https://topiar.by/assets/images/light-23.jpg">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://topiar.by/#business",
+    "name": "TOPIAR",
+    "alternateName": "TOPIAR — Яркие решения",
+    "legalName": "ИП Свидунович Александр Андреевич",
+    "description": "Производство каркасов садовых фигур под озеленение, световых объёмных фигур и новогоднего оформления. Работаем по всей Беларуси.",
+    "url": "https://topiar.by/",
+    "image": "https://topiar.by/assets/images/light-23.jpg",
+    "logo": "https://topiar.by/assets/favicon.svg",
+    "telephone": [
+        "+375296972080",
+        "+375336962080"
+    ],
+    "email": "info@topiar.by",
+    "foundingDate": "2007",
+    "taxID": "291292397",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Московская, 79а/1",
+        "addressLocality": "Брест",
+        "addressCountry": "BY"
+    },
+    "areaServed": {
+        "@type": "Country",
+        "name": "Беларусь"
+    },
+    "sameAs": [
+        "https://t.me/Svidunkash",
+        "https://www.instagram.com/aleksandrsvidunovich"
+    ]
+}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -39,7 +95,7 @@
 
             <a href="constructor.html">Конструктор</a>
     <a href="about.html">О компании</a>
-    <a href="reviews.html">Отзывы</a>
+    <a href="partners.html">С нами работают</a>
     <a href="contacts.html">Контакты</a>
 </nav>
 
@@ -56,7 +112,7 @@
 
         </div>
 
-        <button class="mobile-menu">
+        <button class="mobile-menu" type="button" aria-label="Открыть меню">
             ☰
         </button>
 
@@ -106,23 +162,6 @@
 
 </div>
             </div>
-
-            <div class="hero-video">
-
-                <div class="play-button">
-                    ▶
-                </div>
-
-                <div>
-                    <span>Видео о производстве</span>
-                    <small>1:24</small>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
 
     <div class="hero-scroll">
         <span>↓</span>
@@ -214,7 +253,7 @@
             <div class="stat">
                 <div class="stat-icon">♜</div>
                 <div>
-                    <strong>19+</strong>
+                    <strong data-counter data-target="19" data-suffix="+">0+</strong>
                     <span>лет на рынке</span>
                 </div>
             </div>
@@ -222,7 +261,7 @@
             <div class="stat">
                 <div class="stat-icon">◇</div>
                 <div>
-                    <strong>500+</strong>
+                    <strong data-counter data-target="500" data-suffix="+">0+</strong>
                     <span>реализованных проектов</span>
                 </div>
             </div>
@@ -230,7 +269,7 @@
             <div class="stat">
                 <div class="stat-icon">✦</div>
                 <div>
-                    <strong>250+</strong>
+                    <strong data-counter data-target="250" data-suffix="+">0+</strong>
                     <span>видов продукции</span>
                 </div>
             </div>
@@ -238,8 +277,8 @@
             <div class="stat">
                 <div class="stat-icon">♧</div>
                 <div>
-                    <strong>100%</strong>
-                    <span>довольных клиентов</span>
+                    <strong data-counter data-target="5" data-suffix="">0</strong>
+                    <span>лет гарантии</span>
                 </div>
             </div>
 
@@ -436,7 +475,8 @@
             ========================= -->
 
             <a href="projects.html#project-01"
-               class="project project-main">
+               class="project project-main"
+               data-project-modal="01">
 
                 <div class="project-image project-image-1">
                     <span>TOPIAR</span>
@@ -447,12 +487,12 @@
                 <div class="project-info">
 
                     <span>
-    01 / СВЕТОВЫЕ ИНСТАЛЛЯЦИИ
+    01 / ГОРОДСКАЯ ИЛЛЮМИНАЦИЯ
 </span>
 
 <h3>
-    Крупные объекты<br>
-    на площади
+    Праздничная арка<br>
+    «Беларусь»
 </h3>
 
                 </div>
@@ -465,14 +505,15 @@
             ========================= -->
 
             <a href="projects.html#project-02"
-               class="project">
+               class="project"
+               data-project-modal="02">
 
                 <div class="project-image project-image-2">
                     <span>TOPIAR</span>
 
                     <img class="project-media"
                          src="assets/images/angel-wings.jpg"
-                         alt="Ангельские крылья — световая инсталляция">
+                         alt="Ангельские крылья — световая инсталляция" loading="lazy" decoding="async">
                 </div>
 
                 <div class="project-overlay"></div>
@@ -498,7 +539,8 @@
             ========================= -->
 
             <a href="projects.html#project-03"
-               class="project">
+               class="project"
+               data-project-modal="03">
 
                 <div class="project-image project-image-3">
                     <span>TOPIAR</span>
@@ -519,6 +561,16 @@
 
                 </div>
 
+            </a>
+
+        </div>
+
+
+        <div class="projects-footer-cta">
+
+            <a href="projects.html" class="button button-primary">
+                Все наши работы
+                <span>→</span>
             </a>
 
         </div>
@@ -731,13 +783,23 @@
                     type="text"
                     name="name"
                     placeholder="Ваше имя"
+                    required
                 >
 
                 <input
                     type="tel"
                     name="phone"
                     placeholder="Ваш телефон"
+                    required
                 >
+
+                <label class="consent">
+                    <input type="checkbox" name="consent" required>
+                    <span>
+                        Согласен(на) на обработку персональных данных
+                        на условиях <a href="privacy.html" target="_blank" rel="noopener">политики конфиденциальности</a>
+                    </span>
+                </label>
 
                 <button type="submit">
                     Отправить заявку
@@ -791,7 +853,7 @@
 
             <a href="constructor.html">Конструктор</a>
             <a href="about.html">О компании</a>
-            <a href="reviews.html">Отзывы</a>
+            <a href="partners.html">С нами работают</a>
             <a href="contacts.html">Контакты</a>
 
         </div>
@@ -840,13 +902,63 @@
             © 2026 TOPIAR. Все права защищены.
         </span>
 
-        <span>
-            Политика конфиденциальности
-        </span>
+        <a href="privacy.html">Политика конфиденциальности</a>
 
     </div>
 
 </footer>
+
+
+<!-- =========================
+     МИНИ-ГАЛЕРЕЯ ПРОЕКТА
+========================= -->
+
+<div class="project-modal" id="projectModal">
+
+    <div class="project-modal-overlay" id="projectModalOverlay"></div>
+
+    <div class="project-modal-box">
+
+        <button type="button" class="project-modal-close" id="projectModalClose" aria-label="Закрыть">
+            ✕
+        </button>
+
+        <div class="project-modal-media">
+
+            <img src="" alt="" id="projectModalImage">
+
+            <button type="button" class="project-modal-nav project-modal-prev" id="projectModalPrev" aria-label="Предыдущее фото">
+                ‹
+            </button>
+
+            <button type="button" class="project-modal-nav project-modal-next" id="projectModalNext" aria-label="Следующее фото">
+                ›
+            </button>
+
+            <span class="project-modal-counter" id="projectModalCounter"></span>
+
+        </div>
+
+        <div class="project-modal-info">
+
+            <span class="project-modal-label" id="projectModalLabel"></span>
+
+            <h3 id="projectModalTitle"></h3>
+
+            <p id="projectModalDescription"></p>
+
+            <div class="project-modal-meta" id="projectModalMeta"></div>
+
+            <a href="contacts.html" class="button button-primary project-modal-cta">
+                Обсудить похожий проект
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 <script src="js/main.js"></script>

@@ -1,0 +1,17 @@
+# TOPIAR — настройки для Apache (большинство PHP-хостингов)
+
+# Своя страница 404
+ErrorDocument 404 /404.html
+
+# Закрыть доступ к файлу с токеном, если он лежит рядом с сайтом
+<FilesMatch "^(config|topiar-config)\.php$">
+    Require all denied
+</FilesMatch>
+
+# Не показывать список файлов в папках
+Options -Indexes
+
+# Принудительный HTTPS — раскомментируйте ПОСЛЕ включения SSL-сертификата:
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]

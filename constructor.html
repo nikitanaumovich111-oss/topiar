@@ -12,6 +12,26 @@
         content="Интерактивный конструктор TOPIAR: отметьте нужные элементы оформления галочками и мгновенно увидите, как будет выглядеть готовый проект."
     >
 
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#050605">
+    <link rel="canonical" href="https://topiar.by/constructor.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TOPIAR">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Конструктор оформления — TOPIAR">
+    <meta property="og:description" content="Интерактивный конструктор TOPIAR: отметьте нужные элементы оформления галочками и мгновенно увидите, как будет выглядеть готовый проект.">
+    <meta property="og:url" content="https://topiar.by/constructor.html">
+    <meta property="og:image" content="https://topiar.by/assets/images/light-23.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Конструктор оформления — TOPIAR">
+    <meta name="twitter:description" content="Интерактивный конструктор TOPIAR: отметьте нужные элементы оформления галочками и мгновенно увидите, как будет выглядеть готовый проект.">
+    <meta name="twitter:image" content="https://topiar.by/assets/images/light-23.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -60,8 +80,8 @@
                 О компании
             </a>
 
-            <a href="reviews.html">
-                Отзывы
+            <a href="partners.html">
+                С нами работают
             </a>
 
             <a href="contacts.html">
@@ -85,7 +105,7 @@
         </div>
 
 
-        <button class="mobile-menu">
+        <button class="mobile-menu" type="button" aria-label="Открыть меню">
             ☰
         </button>
 
@@ -102,7 +122,137 @@
 
 <section class="constructor-hero">
 
-    <div class="constructor-hero-glow"></div>
+    <div class="constructor-hero-visual" aria-hidden="true">
+            <svg class="constructor-hero-puzzle" viewBox="-60 -110 700 460" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <defs>
+                    <path id="cvPieceA" d="M 0 0 L 70.00 0.00 C 80.00 0.00 84.00 -6.00 84.00 -14.00 A 24.08 24.08 0 1 1 116.00 -14.00 C 116.00 -6.00 120.00 0.00 130.00 0.00 L 200.00 0.00 L 200.00 70.00 C 200.00 80.00 206.00 84.00 214.00 84.00 A 24.08 24.08 0 1 1 214.00 116.00 C 206.00 116.00 200.00 120.00 200.00 130.00 L 200.00 200.00 L 130.00 200.00 C 120.00 200.00 116.00 194.00 116.00 186.00 A 24.08 24.08 0 1 0 84.00 186.00 C 84.00 194.00 80.00 200.00 70.00 200.00 L 0.00 200.00 L 0.00 130.00 C 0.00 120.00 6.00 116.00 14.00 116.00 A 24.08 24.08 0 1 0 14.00 84.00 C 6.00 84.00 0.00 80.00 0.00 70.00 L 0.00 0.00 Z"/>
+                    <path id="cvPieceB" d="M 0 0 L 70.00 0.00 C 80.00 0.00 84.00 6.00 84.00 14.00 A 24.08 24.08 0 1 0 116.00 14.00 C 116.00 6.00 120.00 0.00 130.00 0.00 L 200.00 0.00 L 200.00 70.00 C 200.00 80.00 206.00 84.00 214.00 84.00 A 24.08 24.08 0 1 1 214.00 116.00 C 206.00 116.00 200.00 120.00 200.00 130.00 L 200.00 200.00 L 130.00 200.00 C 120.00 200.00 116.00 206.00 116.00 214.00 A 24.08 24.08 0 1 1 84.00 214.00 C 84.00 206.00 80.00 200.00 70.00 200.00 L 0.00 200.00 L 0.00 130.00 C 0.00 120.00 6.00 116.00 14.00 116.00 A 24.08 24.08 0 1 0 14.00 84.00 C 6.00 84.00 0.00 80.00 0.00 70.00 L 0.00 0.00 Z"/>
+
+                    <linearGradient id="cvTopA" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#fff0b8"/>
+                        <stop offset=".45" stop-color="#f5d76e"/>
+                        <stop offset="1" stop-color="#d4a83a"/>
+                    </linearGradient>
+                    <linearGradient id="cvTopB" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#e9c85f"/>
+                        <stop offset=".5" stop-color="#c99f35"/>
+                        <stop offset="1" stop-color="#8f6f1e"/>
+                    </linearGradient>
+                    <linearGradient id="cvSheen" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#fff" stop-opacity=".38"/>
+                        <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+                    </linearGradient>
+                    <radialGradient id="cvGlow" cx=".5" cy=".5" r=".5">
+                        <stop offset="0" stop-color="#f5d76e" stop-opacity=".22"/>
+                        <stop offset="1" stop-color="#f5d76e" stop-opacity="0"/>
+                    </radialGradient>
+                    <filter id="cvBlur" x="-30%" y="-30%" width="160%" height="160%">
+                        <feGaussianBlur stdDeviation="14"/>
+                    </filter>
+                </defs>
+
+                <ellipse cx="290" cy="120" rx="330" ry="210" fill="url(#cvGlow)"/>
+                <ellipse class="constructor-hero-puzzle-shadow" cx="300" cy="318" rx="230" ry="16" fill="#000" opacity=".55" filter="url(#cvBlur)"/>
+
+                <g transform="rotate(-8 215 100)">
+
+                    <g class="cv-piece cv-piece-b">
+                        <g transform="translate(232 0)">
+                        <use href="#cvPieceB" transform="translate(12.80 23.20)" fill="#2e240a"/>
+                        <use href="#cvPieceB" transform="translate(12.48 22.62)" fill="#31260b"/>
+                        <use href="#cvPieceB" transform="translate(12.16 22.04)" fill="#33280b"/>
+                        <use href="#cvPieceB" transform="translate(11.84 21.46)" fill="#362a0c"/>
+                        <use href="#cvPieceB" transform="translate(11.52 20.88)" fill="#382c0c"/>
+                        <use href="#cvPieceB" transform="translate(11.20 20.30)" fill="#3b2e0d"/>
+                        <use href="#cvPieceB" transform="translate(10.88 19.72)" fill="#3e300e"/>
+                        <use href="#cvPieceB" transform="translate(10.56 19.14)" fill="#40320e"/>
+                        <use href="#cvPieceB" transform="translate(10.24 18.56)" fill="#43340f"/>
+                        <use href="#cvPieceB" transform="translate(9.92 17.98)" fill="#45360f"/>
+                        <use href="#cvPieceB" transform="translate(9.60 17.40)" fill="#483810"/>
+                        <use href="#cvPieceB" transform="translate(9.28 16.82)" fill="#4b3b11"/>
+                        <use href="#cvPieceB" transform="translate(8.96 16.24)" fill="#4d3d11"/>
+                        <use href="#cvPieceB" transform="translate(8.64 15.66)" fill="#503f12"/>
+                        <use href="#cvPieceB" transform="translate(8.32 15.08)" fill="#524112"/>
+                        <use href="#cvPieceB" transform="translate(8.00 14.50)" fill="#554313"/>
+                        <use href="#cvPieceB" transform="translate(7.68 13.92)" fill="#584514"/>
+                        <use href="#cvPieceB" transform="translate(7.36 13.34)" fill="#5a4714"/>
+                        <use href="#cvPieceB" transform="translate(7.04 12.76)" fill="#5d4915"/>
+                        <use href="#cvPieceB" transform="translate(6.72 12.18)" fill="#5f4b15"/>
+                        <use href="#cvPieceB" transform="translate(6.40 11.60)" fill="#624d16"/>
+                        <use href="#cvPieceB" transform="translate(6.08 11.02)" fill="#654f17"/>
+                        <use href="#cvPieceB" transform="translate(5.76 10.44)" fill="#675117"/>
+                        <use href="#cvPieceB" transform="translate(5.44 9.86)" fill="#6a5318"/>
+                        <use href="#cvPieceB" transform="translate(5.12 9.28)" fill="#6c5518"/>
+                        <use href="#cvPieceB" transform="translate(4.80 8.70)" fill="#6f5719"/>
+                        <use href="#cvPieceB" transform="translate(4.48 8.12)" fill="#72591a"/>
+                        <use href="#cvPieceB" transform="translate(4.16 7.54)" fill="#745b1a"/>
+                        <use href="#cvPieceB" transform="translate(3.84 6.96)" fill="#775d1b"/>
+                        <use href="#cvPieceB" transform="translate(3.52 6.38)" fill="#795f1b"/>
+                        <use href="#cvPieceB" transform="translate(3.20 5.80)" fill="#7c621c"/>
+                        <use href="#cvPieceB" transform="translate(2.88 5.22)" fill="#7f641d"/>
+                        <use href="#cvPieceB" transform="translate(2.56 4.64)" fill="#81661d"/>
+                        <use href="#cvPieceB" transform="translate(2.24 4.06)" fill="#84681e"/>
+                        <use href="#cvPieceB" transform="translate(1.92 3.48)" fill="#866a1e"/>
+                        <use href="#cvPieceB" transform="translate(1.60 2.90)" fill="#896c1f"/>
+                        <use href="#cvPieceB" transform="translate(1.28 2.32)" fill="#8c6e20"/>
+                        <use href="#cvPieceB" transform="translate(0.96 1.74)" fill="#8e7020"/>
+                        <use href="#cvPieceB" transform="translate(0.64 1.16)" fill="#917221"/>
+                        <use href="#cvPieceB" transform="translate(0.32 0.58)" fill="#937421"/>
+                        <use href="#cvPieceB" fill="url(#cvTopB)"/>
+                        <use href="#cvPieceB" fill="url(#cvSheen)"/>
+                        <use href="#cvPieceB" fill="none" stroke="rgba(255,240,190,.45)" stroke-width="1.4" stroke-linejoin="round"/>
+                        </g>
+                    </g>
+
+                    <g class="cv-piece cv-piece-a">
+                        <use href="#cvPieceA" transform="translate(12.80 23.20)" fill="#3c2e0c"/>
+                        <use href="#cvPieceA" transform="translate(12.48 22.62)" fill="#3f300d"/>
+                        <use href="#cvPieceA" transform="translate(12.16 22.04)" fill="#42330e"/>
+                        <use href="#cvPieceA" transform="translate(11.84 21.46)" fill="#45350f"/>
+                        <use href="#cvPieceA" transform="translate(11.52 20.88)" fill="#483810"/>
+                        <use href="#cvPieceA" transform="translate(11.20 20.30)" fill="#4c3a10"/>
+                        <use href="#cvPieceA" transform="translate(10.88 19.72)" fill="#4f3d11"/>
+                        <use href="#cvPieceA" transform="translate(10.56 19.14)" fill="#524012"/>
+                        <use href="#cvPieceA" transform="translate(10.24 18.56)" fill="#554213"/>
+                        <use href="#cvPieceA" transform="translate(9.92 17.98)" fill="#584414"/>
+                        <use href="#cvPieceA" transform="translate(9.60 17.40)" fill="#5b4715"/>
+                        <use href="#cvPieceA" transform="translate(9.28 16.82)" fill="#5e4a16"/>
+                        <use href="#cvPieceA" transform="translate(8.96 16.24)" fill="#614c16"/>
+                        <use href="#cvPieceA" transform="translate(8.64 15.66)" fill="#644e17"/>
+                        <use href="#cvPieceA" transform="translate(8.32 15.08)" fill="#675118"/>
+                        <use href="#cvPieceA" transform="translate(8.00 14.50)" fill="#6a5419"/>
+                        <use href="#cvPieceA" transform="translate(7.68 13.92)" fill="#6e561a"/>
+                        <use href="#cvPieceA" transform="translate(7.36 13.34)" fill="#71581b"/>
+                        <use href="#cvPieceA" transform="translate(7.04 12.76)" fill="#745b1c"/>
+                        <use href="#cvPieceA" transform="translate(6.72 12.18)" fill="#775e1d"/>
+                        <use href="#cvPieceA" transform="translate(6.40 11.60)" fill="#7a601e"/>
+                        <use href="#cvPieceA" transform="translate(6.08 11.02)" fill="#7d621e"/>
+                        <use href="#cvPieceA" transform="translate(5.76 10.44)" fill="#80651f"/>
+                        <use href="#cvPieceA" transform="translate(5.44 9.86)" fill="#836820"/>
+                        <use href="#cvPieceA" transform="translate(5.12 9.28)" fill="#866a21"/>
+                        <use href="#cvPieceA" transform="translate(4.80 8.70)" fill="#8a6c22"/>
+                        <use href="#cvPieceA" transform="translate(4.48 8.12)" fill="#8d6f23"/>
+                        <use href="#cvPieceA" transform="translate(4.16 7.54)" fill="#907224"/>
+                        <use href="#cvPieceA" transform="translate(3.84 6.96)" fill="#937424"/>
+                        <use href="#cvPieceA" transform="translate(3.52 6.38)" fill="#967625"/>
+                        <use href="#cvPieceA" transform="translate(3.20 5.80)" fill="#997926"/>
+                        <use href="#cvPieceA" transform="translate(2.88 5.22)" fill="#9c7c27"/>
+                        <use href="#cvPieceA" transform="translate(2.56 4.64)" fill="#9f7e28"/>
+                        <use href="#cvPieceA" transform="translate(2.24 4.06)" fill="#a28029"/>
+                        <use href="#cvPieceA" transform="translate(1.92 3.48)" fill="#a5832a"/>
+                        <use href="#cvPieceA" transform="translate(1.60 2.90)" fill="#a8862b"/>
+                        <use href="#cvPieceA" transform="translate(1.28 2.32)" fill="#ac882c"/>
+                        <use href="#cvPieceA" transform="translate(0.96 1.74)" fill="#af8a2c"/>
+                        <use href="#cvPieceA" transform="translate(0.64 1.16)" fill="#b28d2d"/>
+                        <use href="#cvPieceA" transform="translate(0.32 0.58)" fill="#b5902e"/>
+                        <use href="#cvPieceA" fill="url(#cvTopA)"/>
+                        <use href="#cvPieceA" fill="url(#cvSheen)"/>
+                        <use href="#cvPieceA" fill="none" stroke="rgba(255,250,220,.7)" stroke-width="1.6" stroke-linejoin="round"/>
+                    </g>
+
+                </g>
+            </svg>
+    </div>
 
     <div class="container">
 
@@ -288,97 +438,101 @@
 
 <footer class="footer">
 
-    <div class="container">
+    <div class="container footer-grid">
 
-        <div class="footer-top">
+        <div class="footer-brand">
 
-            <div class="footer-brand">
+            <a href="index.html" class="logo">
 
-                <a href="index.html" class="logo">
+                <span class="logo-main">
+                    TOPI<span class="logo-accent">AR</span>
+                </span>
 
-                    <span class="logo-main">
-                        TOPI<span class="logo-accent">AR</span>
-                    </span>
+                <span class="logo-subtitle">
+                    ЯРКИЕ РЕШЕНИЯ
+                </span>
 
-                    <span class="logo-subtitle">
-                        ЯРКИЕ РЕШЕНИЯ
-                    </span>
+            </a>
 
-                </a>
-
-                <p>
-                    Делаем города ярче.
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Навигация</h4>
-
-                <a href="index.html">Главная</a>
-                <a href="services.html">Услуги</a>
-                <a href="projects.html">Наши работы</a>
-                <a href="constructor.html">Конструктор</a>
-                <a href="about.html">О компании</a>
-                <a href="reviews.html">Отзывы</a>
-                <a href="contacts.html">Контакты</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Услуги</h4>
-
-                <a href="services.html#topiary">
-                    Топиарные конструкции
-                </a>
-
-                <a href="services.html#light">
-                    Световые фигуры
-                </a>
-
-                <a href="services.html#newyear">
-                    Новогоднее оформление
-                </a>
-
-                <a href="services.html#individual">
-                    Индивидуальные проекты
-                </a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Контакты</h4>
-
-                <a href="tel:+375296972080">
-                    +375 29 697 20 80
-                </a>
-
-                <a href="mailto:info@topiar.by">
-                    info@topiar.by
-                </a>
-
-                <a href="contacts.html">
-                    Все контакты →
-                </a>
-
-            </div>
+            <p>
+                Производство каркасов садовых фигур
+                под озеленение и световых объёмных фигур.
+            </p>
 
         </div>
 
 
-        <div class="footer-bottom">
+        <div class="footer-column">
+
+            <h4>Навигация</h4>
+
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="projects.html">Наши работы</a>
+
+            <a href="constructor.html">Конструктор</a>
+            <a href="about.html">О компании</a>
+            <a href="partners.html">С нами работают</a>
+            <a href="contacts.html">Контакты</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Услуги</h4>
+
+            <a href="services.html#topiary">
+                Топиарные конструкции
+            </a>
+
+            <a href="services.html#light">
+                Световые фигуры
+            </a>
+
+            <a href="services.html#newyear">
+                Новогоднее оформление
+            </a>
+
+            <a href="services.html#individual">
+                Индивидуальные проекты
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Контакты</h4>
+
+            <a href="tel:+375296972080">
+                +375 29 697 20 80
+            </a>
+
+            <a href="tel:+375336962080">
+                +375 33 696 20 80
+            </a>
+
+            <a href="mailto:info@topiar.by">
+                info@topiar.by
+            </a>
 
             <span>
-                © 2026 TOPIAR
+                Брест, Беларусь
             </span>
 
         </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            © 2026 TOPIAR. Все права защищены.
+        </span>
+
+        <a href="privacy.html">Политика конфиденциальности</a>
 
     </div>
 
