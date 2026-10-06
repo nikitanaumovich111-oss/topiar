@@ -1,8 +1,9 @@
-    <?php
+<?php
 // Скопируйте в topiar-config.php (ВЫШЕ папки сайта) или в config.php рядом с send-lead.php.
-// Никогда не публикуйте этот файл в git.
+// Никогда не публикуйте реальный токен бота в репозитории.
 return [
-    'bot_token'     => 'НОВЫЙ_ТОКЕН_ОТ_BOTFATHER',
-    'chat_id'       => 'ВАШ_CHAT_ID',
-    'allowed_hosts' => ['topiar.by', 'www.topiar.by'],
+    'bot_token'      => '8687025135:AAEa2HRc9B7OInrPW_GgN8ac0q3r5Pu2ZGk',
+    'chat_id'        => '931492862',
+    'allowed_hosts'  => ['topiar.by', 'www.topiar.by'],
+    'fallback_email' => 'info@topiar.by',
 ];

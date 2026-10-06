@@ -19,17 +19,24 @@
     <meta property="og:title" content="Услуги — GORODSVETA">
     <meta property="og:description" content="Услуги GORODSVETA: топиарные конструкции, световые фигуры, новогоднее оформление и индивидуальные проекты под ключ — от идеи до монтажа.">
     <meta property="og:url" content="https://topiar.by/services.html">
-    <meta property="og:image" content="https://topiar.by/assets/images/light-23.jpg">
+    <meta property="og:image" content="https://topiar.by/assets/images/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Услуги — GORODSVETA">
     <meta name="twitter:description" content="Услуги GORODSVETA: топиарные конструкции, световые фигуры, новогоднее оформление и индивидуальные проекты под ключ — от идеи до монтажа.">
-    <meta name="twitter:image" content="https://topiar.by/assets/images/light-23.jpg">
+    <meta name="twitter:image" content="https://topiar.by/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="GORODSVETA — световое оформление городской среды">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'" crossorigin>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"></noscript>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" as="style" href="css/style.min.css?v=20261006">
+    <link rel="stylesheet" href="css/style.min.css?v=20261006">
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -47,6 +54,8 @@
 </head>
 
 <body class="services-page">
+
+<a class="skip-link" href="#main-content">Перейти к содержимому</a>
 
 <!-- =========================
      HEADER
@@ -67,7 +76,7 @@
     </span>
         </a>
 
-        <nav class="nav">
+        <nav class="nav" id="site-nav">
             <a href="index.html">Главная</a>
             <a href="services.html" class="active">Услуги</a>
             <a href="projects.html">Наши работы</a>
@@ -90,7 +99,7 @@
 
         </div>
 
-        <button class="mobile-menu" type="button" aria-label="Открыть меню">☰</button>
+        <button class="mobile-menu" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav">☰</button>
 
     </div>
 </header>
@@ -100,7 +109,7 @@
      SERVICES HERO
 ========================= -->
 
-<main>
+<main id="main-content">
 
 <section class="services-hero">
 
@@ -805,7 +814,7 @@
 })();
 </script>
 
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>

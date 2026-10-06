@@ -1,17 +1,49 @@
-# GORODSVETA — настройки для Apache (большинство PHP-хостингов)
+# GORODSVETA — production Apache configuration
 
-# Своя страница 404
 ErrorDocument 404 /404.html
+Options -Indexes
 
-# Закрыть доступ к файлу с токеном, если он лежит рядом с сайтом
-<FilesMatch "^(config|topiar-config)\.php$">
+# HTTPS: enable after SSL is confirmed on the hosting.
+# RewriteEngine On
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Protect server-side configuration, logs and source/control files.
+<FilesMatch "^(config|config\.example|topiar-config)\.php$">
+    Require all denied
+</FilesMatch>
+<FilesMatch "\.(log|md|ini|env|bak|old|orig|dist)$">
     Require all denied
 </FilesMatch>
 
-# Не показывать список файлов в папках
-Options -Indexes
+# Compression for text assets.
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/javascript application/json application/ld+json image/svg+xml application/xml
+</IfModule>
 
-# Принудительный HTTPS — раскомментируйте ПОСЛЕ включения SSL-сертификата:
-# RewriteEngine On
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+# Browser cache for static assets; HTML/PHP stays revalidatable.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType font/woff "access plus 1 month"
+    ExpiresByType font/woff2 "access plus 1 month"
+    ExpiresByType video/mp4 "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+    <FilesMatch "\.(webp|jpg|jpeg|png|svg|woff|woff2|mp4)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+</IfModule>

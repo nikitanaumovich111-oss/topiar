@@ -10,20 +10,14 @@
 (function initReveal() {
 
     const revealSelectors = [
-        '.advantage-item',
-        '.stat',
-        '.product-card',
-        '.project',
         '.gallery-project',
         '.review-card',
         '.partner-item',
         '.service-item',
-        '.work-step',
         '.process-card',
         '.about-value',
         '.about-approach-card',
         '.constructor-option',
-        '.constructor-teaser-box',
         '.contact-detail'
     ];
 
@@ -323,8 +317,6 @@
     if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
 
     const tiltConfig = [
-        { selector: '.project', lift: 0 },
-        { selector: '.product-card', lift: -8 },
         { selector: '.gallery-project-large', lift: -7 },
         { selector: '.gallery-project-wide', lift: -7 }
     ];
@@ -390,22 +382,6 @@
     updateHeader();
 
 })();
-
-
-// ===============================
-// МОБИЛЬНОЕ МЕНЮ
-// ===============================
-
-const mobileMenu = document.querySelector('.mobile-menu');
-const nav = document.querySelector('.nav');
-
-if (mobileMenu && nav) {
-
-    mobileMenu.addEventListener('click', () => {
-        nav.classList.toggle('mobile-open');
-    });
-
-}
 
 
 // ===============================
@@ -526,23 +502,27 @@ const constructorReset = document.querySelector('.constructor-reset');
 // Готовые фото-комбинации (лежат в assets/images/constructor/)
 // Ключ — теги через запятую в алфавитном порядке: figures, fringe, neon
 const constructorPhotos = {
-    '': 'base.jpg',
-    'figures': 'figures.jpg',
-    'fringe': 'fringe.jpg',
-    'neon': 'neon.jpg',
-    'figures,fringe': 'fringe-figures.jpg',
-    'figures,neon': 'figures-neon.jpg',
-    'fringe,neon': 'fringe-neon.jpg',
-    'figures,fringe,neon': 'all.jpg'
+    '': 'base.webp',
+    'figures': 'figures.webp',
+    'fringe': 'fringe.webp',
+    'neon': 'neon.webp',
+    'figures,fringe': 'fringe-figures.webp',
+    'figures,neon': 'figures-neon.webp',
+    'fringe,neon': 'fringe-neon.webp',
+    'figures,fringe,neon': 'all.webp'
 };
 
 const constructorBasePath = 'assets/images/constructor/';
 
-// Предзагрузка всех фото, чтобы переключение было мгновенным
-Object.values(constructorPhotos).forEach(file => {
-    const img = new Image();
-    img.src = constructorBasePath + file;
-});
+// Предзагрузка нужна только на странице конструктора.
+// На остальных страницах эти изображения вообще не должны запрашиваться.
+if (constructorImage && constructorOptions.length) {
+    Object.values(constructorPhotos).forEach(file => {
+        const img = new Image();
+        img.decoding = 'async';
+        img.src = constructorBasePath + file;
+    });
+}
 
 function updateConstructorStage() {
 
@@ -726,7 +706,7 @@ const projectShowcaseData = {
         description: 'Праздничная арка с гирляндами и гербом Республики Беларусь над центральным проспектом — доминанта новогоднего оформления города, хорошо видна с любой точки улицы и днём, и ночью.',
         meta: ['ГОРОД', '2026'],
         images: [
-            'assets/images/light-23.jpg'
+            'assets/images/light-23.webp'
         ]
     },
 
@@ -736,9 +716,9 @@ const projectShowcaseData = {
         description: 'Световая фотозона в виде крыльев — один из самых узнаваемых арт-объектов. Контурная подсветка хорошо читается и днём, и ночью, а конструкция рассчитана на активный поток посетителей.',
         meta: ['СВЕТОВЫЕ ФИГУРЫ', '2026'],
         images: [
-            'assets/images/angel-wings.jpg',
-            'assets/images/light-05.jpg',
-            'assets/images/light-13.jpg'
+            'assets/images/angel-wings.webp',
+            'assets/images/light-05.webp',
+            'assets/images/light-13.webp'
         ]
     },
 
@@ -748,9 +728,9 @@ const projectShowcaseData = {
         description: 'Подвесная световая инсталляция для атриума бизнес-центра: сочетание объёмных фигур и точечной подсветки создаёт праздничную атмосферу внутри помещения.',
         meta: ['БИЗНЕС', '2026'],
         images: [
-            'assets/images/project-03-atrium.jpg',
-            'assets/images/light-06.jpg',
-            'assets/images/light-09.jpg'
+            'assets/images/project-03-atrium.webp',
+            'assets/images/light-06.webp',
+            'assets/images/light-09.webp'
         ]
     }
 
@@ -1046,9 +1026,51 @@ if (filterButtons.length && projects.length) {
     const menu = document.querySelector('.nav');
     if (!btn || !menu) return;
 
-    btn.setAttribute('aria-expanded', 'false');
+    const syncState = () => {
+        const isOpen = menu.classList.contains('mobile-open');
+        btn.setAttribute('aria-expanded', String(isOpen));
+        btn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    };
+
     btn.addEventListener('click', () => {
-        btn.setAttribute('aria-expanded', menu.classList.contains('mobile-open') ? 'true' : 'false');
+        menu.classList.toggle('mobile-open');
+        syncState();
+    });
+
+    menu.addEventListener('click', event => {
+        if (event.target.closest('a')) {
+            menu.classList.remove('mobile-open');
+            syncState();
+        }
+    });
+
+    syncState();
+
+})();
+
+// ===============================
+// HOME — DAY / NIGHT ATMOSPHERE
+// ===============================
+
+(function initHomeMode() {
+
+    const hero = document.querySelector('.home-hero');
+    const buttons = document.querySelectorAll('[data-home-mode]');
+    if (!hero || !buttons.length) return;
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const mode = button.dataset.homeMode;
+            const isDay = mode === 'day';
+
+            hero.classList.toggle('is-day', isDay);
+
+            buttons.forEach(item => {
+                const active = item === button;
+                item.classList.toggle('is-active', active);
+                item.setAttribute('aria-pressed', String(active));
+            });
+        });
     });
 
 })();
